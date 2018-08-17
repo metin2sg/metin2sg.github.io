@@ -56,70 +56,72 @@ section{
 /* slot placement */
 
 .container div#weapon {
-    background-position: -5px -2px;
+    background-position: -5px -5px;
+    top:3px;
     left: 3px;
     width: 32px;
     height: 95px;
 }
 
 .container div#Helmets {
-    background-position: -41px -2px;
+    background-position: -41px -5px;
+    top:3px;
     left: 39px;
     width: 32px;
     height: 29px;
 }
 
 .container div#Shields {
-    background-position: -77px -32px;
+    background-position: -77px -35px;
     left: 75px;
-    top: 32px;
+    top: 35px;
     width: 32px;
     height: 32px;
 }
 
 .container div#Bracelets {
-    background-position: -77px -65px;
+    background-position: -77px -68px;
     left: 75px;
-    top: 65px;
+    top: 68px;
     width: 32px;
     height: 32px;
 }
 
 .container div#Earrings {
-    background-position: -116px -32px;
+    background-position: -116px -35px;
     left: 116px;
-    top: 32px;
+    top: 35px;
     width: 32px;
     height: 32px;
 }
 
 .container div#Necklaces {
-    background-position: -116px -65px;
+    background-position: -116px -68px;
     left: 116px;
-    top: 65px;
+    top: 68px;
     width: 32px;
     height: 32px;
 }
 
 .container div#Armours {
-    background-position: -41px -34px;
-    top: 32px;
+    background-position: -41px -37px;
+    top: 35px;
     left: 39px;
     width: 32px;
     height: 64px;
 }
 
 .container div#Belts {
-    background-position: -41px -106px;
-    top:106px;
+    background-position: -41px -109px;
+    top:109px;
     left: 39px;
     width: 32px;
     height: 29px;
 }
 
 .container div#Shoes {
-    background-position: -41px -146px;
-    top:144px;
+    background-position: -41px -149px;
+    top:147px;
     left: 39px;
     width: 32px;
     height: 29px;
@@ -133,6 +135,7 @@ section{
     margin-right: 5px;
     overflow: auto;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .modal-content .leftdiv {
@@ -150,4 +153,5 @@ section{
 .modal-content .rightdiv {
     width: auto;
     height: auto;
+    line-height: 1px;
 }
