@@ -1,3 +1,4 @@
+//https://softchamp.s3.amazonaws.com/icon/1624353283.png
 var selectedSlot;
 var selectedMain;
 var statusLabel;
