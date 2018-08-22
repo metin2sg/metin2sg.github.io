@@ -1,2253 +1,147 @@
 var gamedata={
-  "Assassin Armours": {
-    "Azure Suit": {
-      "Level": "0",
-      "icon": "https://wiki.metin2sg.com/images/f/f4/B_Azure_Suit.png",
-      "Defense": [
-        12,
-        18,
-        24,
-        30,
-        36,
-        42,
-        48,
-        54,
-        60,
-        66
-      ]
-    },
-    "Ivory Suit": {
-      "Level": "9",
-      "icon": "https://wiki.metin2sg.com/images/8/83/B_Ivory_Suit.png",
-      "Defense": [
-        21,
-        27,
-        33,
-        39,
-        45,
-        51,
-        57,
-        63,
-        69,
-        75
-      ],
-      "Movement Speed": [
-        -2,
-        -2,
-        -2,
-        -2,
-        -2,
-        -2,
-        -2,
-        -2,
-        -2,
-        -2
-      ]
-    },
-    "Crimson Suit": {
-      "Level": "18",
-      "icon": "https://wiki.metin2sg.com/images/b/b5/B_Crimson_Suit.png",
-      "Defense": [
-        29,
-        35,
-        41,
-        47,
-        53,
-        59,
-        65,
-        71,
-        77,
-        83
-      ],
-      "Movement Speed": [
-        -3,
-        -3,
-        -3,
-        -3,
-        -3,
-        -3,
-        -3,
-        -3,
-        -3,
-        -3
-      ]
-    },
-    "Red Ant Suit": {
-      "Level": "26",
-      "icon": "https://wiki.metin2sg.com/images/4/44/B_Red_Ant_Suit.png",
-      "Defense": [
-        38,
-        44,
-        50,
-        56,
-        62,
-        68,
-        74,
-        80,
-        86,
-        92
-      ],
-      "Movement Speed": [
-        -5,
-        -5,
-        -5,
-        -5,
-        -5,
-        -5,
-        -5,
-        -5,
-        -5,
-        -5
-      ]
-    },
-    "Ant Lion Suit": {
-      "Level": "34",
-      "icon": "https://wiki.metin2sg.com/images/b/b1/B_Ant_Lion_Suit.png",
-      "Defense": [
-        47,
-        53,
-        59,
-        65,
-        71,
-        77,
-        83,
-        89,
-        95,
-        101
-      ],
-      "Movement Speed": [
-        -7,
-        -7,
-        -7,
-        -7,
-        -7,
-        -7,
-        -7,
-        -7,
-        -7,
-        -7
-      ]
-    },
-    "Assassin Suit": {
-      "Level": "42",
-      "icon": "https://wiki.metin2sg.com/images/0/0d/B_Assassin_Suit.png",
-      "Defense": [
-        55,
-        61,
-        67,
-        73,
-        79,
-        85,
-        91,
-        97,
-        103,
-        109
-      ],
-      "Movement Speed": [
-        -8,
-        -8,
-        -8,
-        -8,
-        -8,
-        -8,
-        -8,
-        -8,
-        -8,
-        -8
-      ]
-    },
-    "Young Dragon Suit": {
-      "Level": "48",
-      "icon": "https://wiki.metin2sg.com/images/d/db/B_Young_Dragon_Suit.png",
-      "Defense": [
-        64,
-        70,
-        76,
-        82,
-        88,
-        94,
-        100,
-        106,
-        112,
-        118
-      ],
-      "Movement Speed": [
-        -10,
-        -10,
-        -10,
-        -10,
-        -10,
-        -10,
-        -10,
-        -10,
-        -10,
-        -10
-      ]
-    },
-    "Killer Wind Suit": {
-      "Level": "54",
-      "icon": "https://wiki.metin2sg.com/images/3/36/B_Killer_Wind_Suit.png",
-      "Defense": [
-        72,
-        78,
-        84,
-        90,
-        96,
-        102,
-        108,
-        114,
-        120,
-        126
-      ],
-      "Movement Speed": [
-        -12,
-        -12,
-        -12,
-        -12,
-        -12,
-        -12,
-        -12,
-        -12,
-        -12,
-        -12
-      ]
-    },
-    "Fuchsia Suit": {
-      "Level": "61",
-      "icon": "https://wiki.metin2sg.com/images/f/f8/B_Fuchsia_Suit.png",
-      "Defense": [
-        81,
-        87,
-        93,
-        99,
-        105,
-        111,
-        117,
-        123,
-        129,
-        135
-      ],
-      "Movement Speed": [
-        -13,
-        -13,
-        -13,
-        -13,
-        -13,
-        -13,
-        -13,
-        -13,
-        -13,
-        -13
-      ]
-    },
-    "Black Wind Suit": {
-      "Level": "66-70",
-      "icon": "https://wiki.metin2sg.com/images/4/43/B_Black_Wind_Suit.png",
-      "Defense": [
-        90,
-        96,
-        102,
-        108,
-        114,
-        120,
-        126,
-        132,
-        138,
-        144
-      ],
-      "Movement Speed": [
-        15,
-        -14,
-        -13,
-        -12,
-        -11,
-        -10,
-        -9,
-        -8,
-        -7,
-        -6
-      ],
-      "Magic Resistance": [
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        9,
-        12,
-        15,
-        20
-      ]
-    },
-    "Aqua Suit": {
-      "Level": "80-90",
-      "icon": "https://wiki.metin2sg.com/images/c/cc/B_Aqua_Suit.png",
-      "Defense": [
-        154,
-        164,
-        174,
-        184,
-        194,
-        204,
-        214,
-        224,
-        234,
-        244
-      ],
-      "Resistance to Demi-Human": [
-        1,
-        2,
-        4,
-        5,
-        6,
-        8,
-        10,
-        12,
-        13,
-        15
-      ],
-      "Magic Resistance": [
-        20,
-        20,
-        20,
-        20,
-        20,
-        20,
-        20,
-        20,
-        20,
-        20
-      ]
-    },
-    "Dragon Rider Suit": {
-      "Level": "90-105",
-      "icon": "https://wiki.metin2sg.com/images/c/cf/B_Dragon_Rider_Suit.png",
-      "Defense": [
-        170,
-        190,
-        210,
-        230,
-        250,
-        270,
-        290,
-        310,
-        330,
-        350
-      ],
-      "Average Damage Resistance": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "Magic Resistance": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "Max HP": [
-        1,
-        2,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        10
-      ]
-    },
-    "Ambush Suit": {
-      "Level": "105-115",
-      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
-      "Defense": [
-        140,
-        150,
-        154,
-        160,
-        170,
-        184,
-        204,
-        234,
-        276,
-        340
-      ],
-      "Average Damage Resistance": [
-        1,
-        2,
-        3,
-        5,
-        7,
-        9,
-        11,
-        13,
-        15,
-        20
-      ],
-      "Magic Resistance": [
-        1,
-        2,
-        3,
-        5,
-        7,
-        9,
-        11,
-        13,
-        15,
-        20
-      ],
-      "Strong Against Monster": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    },
-    "Blood Moon Suit": {
-      "Level": "105-115",
-      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
-      "Defense": [
-        140,
-        150,
-        154,
-        160,
-        170,
-        184,
-        204,
-        234,
-        276,
-        340
-      ],
-      "Moving Speed": [
-        15,
-        -15,
-        -15,
-        -12,
-        -9,
-        -6,
-        -4,
-        -2,
-        -1,
-        0
-      ],
-      "Magic Resistance": [
-        6,
-        8,
-        10,
-        12,
-        15,
-        17,
-        20,
-        22,
-        25,
-        30
-      ],
-      "Resistance Against Skill Damage": [
-        1,
-        1,
-        1,
-        2,
-        2,
-        3,
-        3,
-        4,
-        4,
-        5
-      ]
-    },
-    "Metamorphosis Suit": {
-      "Level": "105-115",
-      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
-      "Defense": [
-        140,
-        150,
-        154,
-        160,
-        170,
-        184,
-        204,
-        234,
-        276,
-        340
-      ],
-      "Moving Speed": [
-        15,
-        -15,
-        -15,
-        -12,
-        -9,
-        -6,
-        -4,
-        -2,
-        -1,
-        0
-      ],
-      "Strong Against Monster": [
-        2,
-        2,
-        3,
-        3,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "Chance to Restore HP": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    },
-    "Night of Death Suit": {
-      "Level": "105-115",
-      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
-      "Defense": [
-        140,
-        150,
-        154,
-        160,
-        170,
-        184,
-        204,
-        234,
-        276,
-        340
-      ],
-      "Moving Speed": [
-        15,
-        -15,
-        -15,
-        -12,
-        -9,
-        -6,
-        -4,
-        -2,
-        -1,
-        0
-      ],
-      "Magic Resistance": [
-        6,
-        8,
-        10,
-        12,
-        15,
-        17,
-        20,
-        22,
-        25,
-        30
-      ],
-      "Resistance Against Skill Damage": [
-        1,
-        1,
-        1,
-        2,
-        2,
-        3,
-        3,
-        4,
-        4,
-        5
-      ]
-    },
-    "Red Hwang Armour": {
+  "Belts": {
+    "Copper Belt": {
       "Level": "50",
-      "icon": "https://wiki.metin2sg.com/images/7/7f/B_Red_Hwang_Armour.png",
-      "Defense": [
-        550,
-        550,
-        550,
-        550,
-        550,
-        550,
-        550,
-        550,
-        550,
-        550
-      ],
-      "Moving Speed": [
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10
-      ],
-      "Magic Resistance": [
-        20,
-        20,
-        20,
-        20,
-        20,
-        20,
-        20,
-        20,
-        20,
-        20
-      ],
-      "Strong Against Demi-Human": [
-        15,
-        15,
-        15,
-        15,
-        15,
-        15,
-        15,
-        15,
-        15,
-        15
-      ]
-    }
-  },
-  "Assassin Helmets": {
-    "Leather Hood": {
-      "Level": "0",
-      "icon": "https://wiki.metin2sg.com/images/6/6a/B_Leather_Hood.png",
-      "Defense": [
-        5,
-        9,
-        13,
-        17,
-        21,
-        25,
-        29,
-        33,
-        37,
-        41
-      ]
-    },
-    "Chain Hood": {
-      "Level": "21",
-      "icon": "https://wiki.metin2sg.com/images/f/f6/B_Chain_Hood.png",
-      "Defense": [
-        9,
-        13,
-        17,
-        21,
-        25,
-        33,
-        41,
-        49,
-        57,
-        65
-      ]
-    },
-    "Steel Hood": {
-      "Level": "41",
-      "icon": "https://wiki.metin2sg.com/images/8/8f/B_Steel_Hood.png",
-      "Defense": [
-        13,
-        17,
-        21,
-        25,
-        29,
-        39,
-        49,
-        59,
-        69,
-        79
-      ]
-    },
-    "Orc Hood": {
-      "Level": "60",
-      "icon": "https://wiki.metin2sg.com/images/7/7b/B_Orc_Hood.png",
-      "Defense": [
-        17,
-        21,
-        25,
-        29,
-        39,
-        49,
-        59,
-        69,
-        79,
-        89
-      ],
-      "Chance to Block Physical Attacks": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    },
-    "Spider Hood": {
-      "Level": "80",
-      "icon": "https://wiki.metin2sg.com/images/3/3d/B_Spider_Hood.png",
-      "Defense": [
-        21,
-        25,
-        29,
-        39,
-        49,
-        59,
-        69,
-        79,
-        89,
-        99
-      ],
+      "icon": "https://wiki.metin2sg.com/images/7/76/B_Copper_Belt.png",
       "Max HP": [
         50,
-        100,
-        150,
-        300,
-        450,
-        600,
-        800,
-        1000,
-        1200,
-        1500
-      ]
-    },
-    "Helm of Champions": {
-      "Level": "99",
-      "icon": "https://wiki.metin2sg.com/images/d/d9/B_Helm_of_Champions.png",
-      "Defense": [
-        99,
-        99,
-        99,
-        99,
-        99,
-        99,
-        99,
-        99,
-        99,
-        99
-      ],
-      "Max HP": [
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000
-      ],
-      "Chance of Critical Hit": [
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10
-      ]
-    }
-  },
-  "Bracelets": {
-    "Wood Bracelet": {
-      "Level": "0",
-      "icon": "https://wiki.metin2sg.com/images/8/87/B_Wood_Bracelet.png",
-      "Attack Speed": [
-        1,
-        1,
-        2,
-        2,
-        3,
-        3,
-        4,
-        4,
-        5,
-        5
-      ],
-      "Max Endurance": [
-        10,
-        15,
-        25,
-        40,
+        50,
         60,
+        70,
+        80,
         90,
-        140,
-        210,
-        330,
+        100,
+        200,
+        300,
         500
       ]
     },
-    "Copper Bracelet": {
-      "Level": "8",
-      "icon": "https://wiki.metin2sg.com/images/5/59/B_Copper_Bracelet.png",
-      "Attack Speed": [
-        1,
-        1,
-        2,
-        2,
-        3,
-        3,
-        4,
-        4,
-        5,
-        5
-      ],
+    "Silver Belt": {
+      "Level": "70",
+      "icon": "https://wiki.metin2sg.com/images/d/d0/B_Silver_Belt.png",
       "Max SP": [
-        5,
         10,
-        15,
+        10,
         20,
-        25,
-        35,
-        55,
+        30,
+        40,
+        50,
+        60,
         80,
-        120,
-        180
+        100,
+        200
       ]
     },
-    "Silver Bracelet": {
-      "Level": "15",
-      "icon": "https://wiki.metin2sg.com/images/7/77/B_Silver_Bracelet.png",
-      "Attack Speed": [
-        1,
-        1,
-        2,
-        2,
-        3,
-        3,
-        4,
-        4,
-        5,
-        5
-      ],
-      "Max HP": [
-        20,
-        35,
-        60,
-        90,
-        150,
-        250,
-        350,
-        500,
-        700,
-        1200
-      ]
-    },
-    "Gold Bracelet": {
-      "Level": "22",
-      "icon": "https://wiki.metin2sg.com/images/0/09/B_Gold_Bracelet.png",
-      "Attack Speed": [
-        1,
-        1,
-        2,
-        2,
-        3,
-        3,
-        4,
-        4,
-        5,
-        5
-      ],
-      "Poison Resistance": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    },
-    "Jade Bracelet": {
-      "Level": "28",
-      "icon": "https://wiki.metin2sg.com/images/f/f6/B_Jade_Bracelet.png",
-      "Attack Speed": [
-        1,
-        1,
-        2,
-        2,
-        3,
-        3,
-        4,
-        5,
-        6,
-        7
-      ],
-      "Chance to Restore SP": [
-        1,
-        1,
-        2,
-        2,
-        3,
-        3,
-        4,
-        4,
-        5,
-        5
-      ]
-    },
-    "Ebony Bracelet": {
-      "Level": "33",
-      "icon": "https://wiki.metin2sg.com/images/1/1b/B_Ebony_Bracelet.png",
-      "Attack Speed": [
-        1,
-        1,
-        2,
-        2,
-        3,
-        3,
-        4,
-        5,
-        6,
-        7
-      ],
-      "Chance to Restore HP": [
-        1,
-        1,
-        2,
-        2,
-        3,
-        3,
-        4,
-        4,
-        5,
-        5
-      ]
-    },
-    "Pearl Bracelet": {
-      "Level": "38",
-      "icon": "https://wiki.metin2sg.com/images/d/da/B_Pearl_Bracelet.png",
-      "Attack Speed": [
-        1,
-        1,
-        2,
-        2,
-        3,
-        3,
-        4,
-        5,
-        6,
-        7
-      ],
-      "Max SP": [
-        15,
-        20,
-        30,
-        50,
-        75,
-        105,
-        165,
-        240,
-        350,
-        500
-      ]
-    },
-    "White Gold Bracelet": {
-      "Level": "42",
-      "icon": "https://wiki.metin2sg.com/images/8/81/B_White_Gold_Bracelet.png",
-      "Attack Speed": [
-        1,
-        1,
-        2,
-        2,
-        3,
-        3,
-        4,
-        5,
-        6,
-        7
-      ],
-      "Max SP": [
-        25,
-        40,
-        65,
-        110,
-        180,
-        300,
-        500,
-        800,
-        1200,
-        1800
-      ]
-    },
-    "Crystal Bracelet": {
-      "Level": "46",
-      "icon": "https://wiki.metin2sg.com/images/6/61/B_Crystal_Bracelet.png",
-      "Attack Speed": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "HP Regeneration": [
-        8,
-        10,
-        12,
-        15,
-        19,
-        24,
-        30,
-        36,
-        45,
-        56
-      ]
-    },
-    "Amethyst Bracelet": {
-      "Level": "50",
-      "icon": "https://wiki.metin2sg.com/images/7/78/B_Amethyst_Bracelet.png",
-      "Attack Speed": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "SP Regeneration": [
-        8,
-        10,
-        12,
-        15,
-        19,
-        24,
-        30,
-        36,
-        45,
-        56
-      ]
-    },
-    "Heaven's Tear Bracelet": {
-      "Level": "54",
-      "icon": "https://wiki.metin2sg.com/images/5/55/B_Heaven%27s_Tear_Bracelet.png",
-      "Attack Speed": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "Chance of Critical Hit": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    },
-    "Soul Crystal Bracelet": {
-      "Level": "58",
-      "icon": "https://wiki.metin2sg.com/images/b/b9/B_Soul_Crystal_Bracelet.png",
-      "Attack Speed": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "Intelligence": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    },
-    "Ruby Bracelet": {
+    "Golden Belt": {
       "Level": "85",
-      "icon": "https://wiki.metin2sg.com/images/d/d9/B_Ruby_Bracelet.png",
-      "Attack Speed": [
+      "icon": "https://wiki.metin2sg.com/images/c/c5/B_Golden_Belt.png",
+      "Chance to drop double Gold": [
+        1,
+        1,
         1,
         2,
-        3,
-        4,
-        5,
-        6,
-        8,
-        10,
-        12,
-        15
-      ],
-      "Strong Against Warrior": [
-        1,
+        2,
         2,
         3,
+        3,
         4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
+        5
       ]
     },
-    "Garnet Bracelet": {
-      "Level": "90",
-      "icon": "https://wiki.metin2sg.com/images/2/28/B_Garnet_Bracelet.png",
-      "Attack Speed": [
+    "White Gold Belt": {
+      "Level": "97",
+      "icon": "https://wiki.metin2sg.com/images/0/0f/B_White_Gold_Belt.png",
+      "Chance for EXP bonus": [
+        1,
+        1,
         1,
         2,
-        3,
-        4,
-        5,
-        6,
-        8,
-        10,
-        12,
-        15
-      ],
-      "Strong Against Assassin": [
-        1,
+        2,
         2,
         3,
+        3,
         4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
+        5
       ]
     },
-    "Emerald Bracelet": {
-      "Level": "95",
-      "icon": "https://wiki.metin2sg.com/images/1/11/B_Emerald_Bracelet.png",
-      "Attack Speed": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        8,
-        10,
-        12,
-        15
-      ],
-      "Strong Against Sura": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    },
-    "Sapphire Bracelet": {
+    "Soul Crystal Belt": {
       "Level": "100",
-      "icon": "https://wiki.metin2sg.com/images/7/77/B_Sapphire_Bracelet.png",
-      "Attack Speed": [
+      "icon": "https://wiki.metin2sg.com/images/3/3c/B_Soul_Crystal_Belt.png",
+      "Strong against Monster": [
+        1,
+        1,
         1,
         2,
-        3,
-        4,
-        5,
-        6,
-        8,
-        10,
-        12,
-        15
-      ],
-      "Strong Against Mages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    }
-  },
-  "Earrings": {
-    "Wooden Earrings": {
-      "Level": "0",
-      "icon": "https://wiki.metin2sg.com/images/4/47/B_Wooden_Earrings.png",
-      "Agility": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    },
-    "Copper Earrings": {
-      "Level": "8",
-      "icon": "https://wiki.metin2sg.com/images/2/26/B_Copper_Earrings.png",
-      "Strength": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    },
-    "Silver Earrings": {
-      "Level": "15",
-      "icon": "https://wiki.metin2sg.com/images/2/21/B_Silver_Earrings.png",
-      "Life Energy": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    },
-    "Golden Earrings": {
-      "Level": "22",
-      "icon": "https://wiki.metin2sg.com/images/8/8b/B_Golden_Earrings.png",
-      "Inteligence": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    },
-    "Jade Earrings": {
-      "Level": "28",
-      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
-      "Agility": [
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12
-      ],
-      "Max SP": [
-        10,
-        15,
-        20,
-        35,
-        50,
-        70,
-        110,
-        160,
-        230,
-        350
-      ]
-    },
-    "Ebony Earrings": {
-      "Level": "33",
-      "icon": "https://wiki.metin2sg.com/images/9/96/B_Ebony_Earrings.png",
-      "Strength": [
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12
-      ],
-      "Max HP": [
-        25,
-        40,
-        60,
-        100,
-        150,
-        250,
-        400,
-        650,
-        1000,
-        1650
-      ]
-    },
-    "Pearl Earrings": {
-      "Level": "38",
-      "icon": "https://wiki.metin2sg.com/images/9/97/B_Pearl_Earrings.png",
-      "Life Energy": [
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12
-      ],
-      "SP Regeneration": [
-        25,
-        40,
-        60,
-        100,
-        150,
-        250,
-        400,
-        650,
-        1000,
-        1650
-      ]
-    },
-    "White Gold Earrings": {
-      "Level": "42",
-      "icon": "https://wiki.metin2sg.com/images/b/b4/B_White_Gold_Earrings.png",
-      "Intelligence": [
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12
-      ],
-      "HP Regeneration": [
-        25,
-        40,
-        60,
-        100,
-        150,
-        250,
-        400,
-        650,
-        1000,
-        1650
-      ]
-    },
-    "Crystal Earrings": {
-      "Level": "46",
-      "icon": "https://wiki.metin2sg.com/images/7/75/B_Crystal_Earrings.png",
-      "Agility": [
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
-      ],
-      "Defense": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    },
-    "Amethyst Earrings": {
-      "Level": "50",
-      "icon": "https://wiki.metin2sg.com/images/9/91/B_Amethyst_Earrings.png",
-      "Life Energy": [
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
-      ],
-      "Attack Value": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    },
-    "Heaven's Tear Earrings": {
-      "Level": "54",
-      "icon": "https://wiki.metin2sg.com/images/8/88/B_Heaven%27s_Tear_Earrings.png",
-      "Intelligence": [
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
-      ],
-      "Chance of Critical Hit": [
-        1,
-        1,
         2,
         2,
         3,
         3,
         4,
-        4,
-        5,
         5
       ]
     },
-    "Soul Crystal Earrings": {
-      "Level": "62",
-      "icon": "https://wiki.metin2sg.com/images/4/47/B_Soul_Crystal_Earrings.png",
-      "Agility": [
-        2,
-        3,
-        5,
-        7,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
-      ],
-      "Strong Against Monster": [
-        2,
-        4,
-        5,
-        6,
-        8,
-        9,
-        11,
-        12,
-        13,
-        15
-      ]
-    },
-    "Ruby Earrings": {
-      "Level": "85",
-      "icon": "https://wiki.metin2sg.com/images/a/ad/B_Ruby_Earrings.png",
-      "Inteligence": [
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
-      ],
-      "Mas SP": [
-        10,
-        15,
-        20,
-        35,
-        50,
-        70,
-        110,
-        160,
-        230,
-        350
-      ],
-      "Skill Damage": [
+    "Garnet Belt": {
+      "Level": "103",
+      "icon": "https://wiki.metin2sg.com/images/e/e9/B_Garnet_Belt.png",
+      "Resistance to Warrior Attack": [
+        1,
         1,
         1,
         2,
         2,
+        2,
         3,
         3,
         4,
-        4,
-        5,
         5
       ]
     },
-    "Garnet Earrings": {
-      "Level": "90",
-      "icon": "https://wiki.metin2sg.com/images/0/0e/B_Garnet_Earrings.png",
-      "Strenght": [
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
-      ],
-      "Mas HP": [
-        10,
-        15,
-        20,
-        35,
-        50,
-        70,
-        110,
-        160,
-        230,
-        350
-      ],
-      "Average Damage Resistance": [
+    "Ruby Belt": {
+      "Level": "103",
+      "icon": "https://wiki.metin2sg.com/images/8/89/B_Ruby_Belt.png",
+      "Resistance to Assassin Attack": [
         1,
         1,
+        1,
+        2,
         2,
         2,
         3,
         3,
         4,
-        4,
-        5,
         5
       ]
     },
-    "Emerald Earrings": {
-      "Level": "95",
-      "icon": "https://wiki.metin2sg.com/images/4/47/B_Emerald_Earrings.png",
-      "Agility": [
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
-      ],
-      "Average Skill Damage": [
+    "Emerald Belt": {
+      "Level": "103",
+      "icon": "https://wiki.metin2sg.com/images/f/fd/B_Emerald_Belt.png",
+      "Resistance to Sura Attack": [
         1,
         1,
+        1,
+        2,
         2,
         2,
         3,
         3,
         4,
-        4,
-        5,
-        5
-      ],
-      "Average Damage Resistance": [
-        1,
-        1,
-        2,
-        2,
-        3,
-        3,
-        4,
-        4,
-        5,
         5
       ]
     },
-    "Sapphire Earrings": {
-      "Level": "100",
-      "icon": "https://wiki.metin2sg.com/images/8/87/B_Sapphire_Earrings.png",
-      "Life Energy": [
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
-      ],
-      "Resistance Against Skill Damage": [
+    "Sapphire Belt": {
+      "Level": "103",
+      "icon": "https://wiki.metin2sg.com/images/7/75/B_Sapphire_Belt.png",
+      "Resistance to Mage Attack": [
         1,
         1,
+        1,
+        2,
         2,
         2,
         3,
         3,
         4,
-        4,
-        5,
         5
-      ],
-      "Average Damage Resistance": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    }
-  },
-  "Mage Armours": {
-    "Azure Dress": {
-      "Level": "0",
-      "icon": "https://wiki.metin2sg.com/images/d/d2/B_Azure_Dress.png",
-      "Defense": [
-        12,
-        18,
-        24,
-        30,
-        36,
-        42,
-        48,
-        54,
-        60,
-        66
-      ]
-    },
-    "Turquoise Dress": {
-      "Level": "9",
-      "icon": "https://wiki.metin2sg.com/images/8/85/B_Turquoise_Dress.png",
-      "Defense": [
-        21,
-        27,
-        33,
-        39,
-        45,
-        51,
-        57,
-        63,
-        69,
-        75
-      ],
-      "Movement Speed": [
-        -2,
-        -2,
-        -2,
-        -2,
-        -2,
-        -2,
-        -2,
-        -2,
-        -2,
-        -2
-      ]
-    },
-    "Pink Dress": {
-      "Level": "18",
-      "icon": "https://wiki.metin2sg.com/images/e/ec/B_Pink_Dress.png",
-      "Defense": [
-        29,
-        35,
-        41,
-        47,
-        53,
-        59,
-        65,
-        71,
-        77,
-        83
-      ],
-      "Movement Speed": [
-        -3,
-        -3,
-        -3,
-        -3,
-        -3,
-        -3,
-        -3,
-        -3,
-        -3,
-        -3
-      ]
-    },
-    "Amorous Dress": {
-      "Level": "26",
-      "icon": "https://wiki.metin2sg.com/images/a/af/B_Amorous_Dress.png",
-      "Defense": [
-        38,
-        44,
-        50,
-        56,
-        62,
-        68,
-        74,
-        80,
-        86,
-        92
-      ],
-      "Movement Speed": [
-        -5,
-        -5,
-        -5,
-        -5,
-        -5,
-        -5,
-        -5,
-        -5,
-        -5,
-        -5
-      ]
-    },
-    "Western Sky Dress": {
-      "Level": "34",
-      "icon": "https://wiki.metin2sg.com/images/6/6d/B_Western_Sky_Dress.png",
-      "Defense": [
-        47,
-        53,
-        59,
-        65,
-        71,
-        77,
-        83,
-        89,
-        95,
-        101
-      ],
-      "Movement Speed": [
-        -7,
-        -7,
-        -7,
-        -7,
-        -7,
-        -7,
-        -7,
-        -7,
-        -7,
-        -7
-      ]
-    },
-    "Solar Dress": {
-      "Level": "42",
-      "icon": "https://wiki.metin2sg.com/images/f/f7/B_Solar_Dress.png",
-      "Defense": [
-        55,
-        61,
-        67,
-        73,
-        79,
-        85,
-        91,
-        97,
-        103,
-        109
-      ],
-      "Movement Speed": [
-        -8,
-        -8,
-        -8,
-        -8,
-        -8,
-        -8,
-        -8,
-        -8,
-        -8,
-        -8
-      ]
-    },
-    "Moral Dress": {
-      "Level": "48",
-      "icon": "https://wiki.metin2sg.com/images/f/f5/B_Moral_Dress.png",
-      "Defense": [
-        64,
-        70,
-        76,
-        82,
-        88,
-        94,
-        100,
-        106,
-        112,
-        118
-      ],
-      "Movement Speed": [
-        -10,
-        -10,
-        -10,
-        -10,
-        -10,
-        -10,
-        -10,
-        -10,
-        -10,
-        -10
-      ]
-    },
-    "Orange Cat Dress": {
-      "Level": "54",
-      "icon": "https://wiki.metin2sg.com/images/3/3b/B_Orange_Cat_Dress.png",
-      "Defense": [
-        72,
-        78,
-        84,
-        90,
-        96,
-        102,
-        108,
-        114,
-        120,
-        126
-      ],
-      "Movement Speed": [
-        -12,
-        -12,
-        -12,
-        -12,
-        -12,
-        -12,
-        -12,
-        -12,
-        -12,
-        -12
-      ]
-    },
-    "Baroness Dress": {
-      "Level": "61",
-      "icon": "https://wiki.metin2sg.com/images/4/4f/B_Baroness_Dress.png",
-      "Defense": [
-        81,
-        87,
-        93,
-        99,
-        105,
-        111,
-        117,
-        123,
-        129,
-        135
-      ],
-      "Movement Speed": [
-        -13,
-        -13,
-        -13,
-        -13,
-        -13,
-        -13,
-        -13,
-        -13,
-        -13,
-        -13
-      ]
-    },
-    "Black Tunic": {
-      "Level": "66-70",
-      "icon": "https://wiki.metin2sg.com/images/3/3f/B_Black_Tunic.png",
-      "Defense": [
-        90,
-        96,
-        102,
-        108,
-        114,
-        120,
-        126,
-        132,
-        138,
-        144
-      ],
-      "Movement Speed": [
-        15,
-        -14,
-        -13,
-        -12,
-        -11,
-        -10,
-        -9,
-        -8,
-        -7,
-        -6
-      ],
-      "Magic Resistance": [
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        9,
-        12,
-        15,
-        20
-      ]
-    },
-    "Aqua Tunic": {
-      "Level": "80-90",
-      "icon": "https://wiki.metin2sg.com/images/a/a3/B_Aqua_Tunic.png",
-      "Defense": [
-        154,
-        164,
-        174,
-        184,
-        194,
-        204,
-        214,
-        224,
-        234,
-        244
-      ],
-      "Resistance to Demi-Human": [
-        1,
-        2,
-        4,
-        5,
-        6,
-        8,
-        10,
-        12,
-        13,
-        15
-      ],
-      "Magic Resistance": [
-        20,
-        20,
-        20,
-        20,
-        20,
-        20,
-        20,
-        20,
-        20,
-        20
-      ]
-    },
-    "Golden Clothing": {
-      "Level": "86-100",
-      "icon": "https://wiki.metin2sg.com/images/e/e5/B_Golden_Clothing.png",
-      "Defense": [
-        170,
-        190,
-        210,
-        230,
-        250,
-        270,
-        290,
-        310,
-        330,
-        350
-      ],
-      "Average Damage Resistance": [
-        8,
-        9,
-        10,
-        11,
-        13,
-        15,
-        17,
-        19,
-        22,
-        25
-      ],
-      "Magic Resistance": [
-        10,
-        12,
-        14,
-        16,
-        18,
-        20,
-        22,
-        24,
-        27,
-        30
-      ],
-      "Max HP": [
-        1,
-        2,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        10
-      ]
-    },
-    "Sang-Hwang Armour": {
-      "Level": "50",
-      "icon": "https://wiki.metin2sg.com/images/f/f5/B_Sang-Hwang_Armour.png",
-      "Defense": [
-        550,
-        550,
-        550,
-        550,
-        550,
-        550,
-        550,
-        550,
-        550,
-        550
-      ],
-      "Moving Speed": [
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10
-      ],
-      "Magic Resistance": [
-        20,
-        20,
-        20,
-        20,
-        20,
-        20,
-        20,
-        20,
-        20,
-        20
-      ],
-      "Strong Against Demi-Human": [
-        15,
-        15,
-        15,
-        15,
-        15,
-        15,
-        15,
-        15,
-        15,
-        15
-      ]
-    }
-  },
-  "Mage Helmets": {
-    "Monk Hat": {
-      "Level": "0",
-      "icon": "https://wiki.metin2sg.com/images/9/90/B_Monk_Hat.png",
-      "Defense": [
-        5,
-        9,
-        13,
-        17,
-        21,
-        25,
-        29,
-        33,
-        37,
-        41
-      ]
-    },
-    "Phoenix Hat": {
-      "Level": "21",
-      "icon": "https://wiki.metin2sg.com/images/6/65/B_Phoenix_Hat.png",
-      "Defense": [
-        9,
-        13,
-        17,
-        21,
-        25,
-        33,
-        41,
-        49,
-        57,
-        65
-      ]
-    },
-    "Sunlight Hat": {
-      "Level": "41",
-      "icon": "https://wiki.metin2sg.com/images/f/f5/B_Sunlight_Hat.png",
-      "Defense": [
-        13,
-        17,
-        21,
-        25,
-        29,
-        39,
-        49,
-        59,
-        69,
-        79
-      ]
-    },
-    "Cardinal's Hat": {
-      "Level": "60",
-      "icon": "https://wiki.metin2sg.com/images/1/15/B_Cardinal%27s_Hat.png",
-      "Defense": [
-        17,
-        21,
-        25,
-        29,
-        39,
-        49,
-        59,
-        69,
-        79,
-        89
-      ],
-      "Chance to Block Physical Attacks": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    },
-    "Soul Shard Hat": {
-      "Level": "80",
-      "icon": "https://wiki.metin2sg.com/images/6/63/B_Soul_Shard_Hat.png",
-      "Defense": [
-        21,
-        25,
-        29,
-        39,
-        49,
-        59,
-        69,
-        79,
-        89,
-        99
-      ],
-      "Max HP": [
-        50,
-        100,
-        150,
-        300,
-        450,
-        600,
-        800,
-        1000,
-        1200,
-        1500
-      ]
-    },
-    "Helm of Champions": {
-      "Level": "99",
-      "icon": "https://wiki.metin2sg.com/images/d/d9/B_Helm_of_Champions.png",
-      "Defense": [
-        99,
-        99,
-        99,
-        99,
-        99,
-        99,
-        99,
-        99,
-        99,
-        99
-      ],
-      "Max HP": [
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000
-      ],
-      "Chance of Critical Hit": [
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10
       ]
     }
   },
@@ -3617,6 +1511,2758 @@ var gamedata={
       ]
     }
   },
+  "Bracelets": {
+    "Wood Bracelet": {
+      "Level": "0",
+      "icon": "https://wiki.metin2sg.com/images/8/87/B_Wood_Bracelet.png",
+      "Attack Speed": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5
+      ],
+      "Max Endurance": [
+        10,
+        15,
+        25,
+        40,
+        60,
+        90,
+        140,
+        210,
+        330,
+        500
+      ]
+    },
+    "Copper Bracelet": {
+      "Level": "8",
+      "icon": "https://wiki.metin2sg.com/images/5/59/B_Copper_Bracelet.png",
+      "Attack Speed": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5
+      ],
+      "Max SP": [
+        5,
+        10,
+        15,
+        20,
+        25,
+        35,
+        55,
+        80,
+        120,
+        180
+      ]
+    },
+    "Silver Bracelet": {
+      "Level": "15",
+      "icon": "https://wiki.metin2sg.com/images/7/77/B_Silver_Bracelet.png",
+      "Attack Speed": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5
+      ],
+      "Max HP": [
+        20,
+        35,
+        60,
+        90,
+        150,
+        250,
+        350,
+        500,
+        700,
+        1200
+      ]
+    },
+    "Gold Bracelet": {
+      "Level": "22",
+      "icon": "https://wiki.metin2sg.com/images/0/09/B_Gold_Bracelet.png",
+      "Attack Speed": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5
+      ],
+      "Poison Resistance": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Jade Bracelet": {
+      "Level": "28",
+      "icon": "https://wiki.metin2sg.com/images/f/f6/B_Jade_Bracelet.png",
+      "Attack Speed": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Chance to Restore SP": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5
+      ]
+    },
+    "Ebony Bracelet": {
+      "Level": "33",
+      "icon": "https://wiki.metin2sg.com/images/1/1b/B_Ebony_Bracelet.png",
+      "Attack Speed": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Chance to Restore HP": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5
+      ]
+    },
+    "Pearl Bracelet": {
+      "Level": "38",
+      "icon": "https://wiki.metin2sg.com/images/d/da/B_Pearl_Bracelet.png",
+      "Attack Speed": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Max SP": [
+        15,
+        20,
+        30,
+        50,
+        75,
+        105,
+        165,
+        240,
+        350,
+        500
+      ]
+    },
+    "White Gold Bracelet": {
+      "Level": "42",
+      "icon": "https://wiki.metin2sg.com/images/8/81/B_White_Gold_Bracelet.png",
+      "Attack Speed": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Max SP": [
+        25,
+        40,
+        65,
+        110,
+        180,
+        300,
+        500,
+        800,
+        1200,
+        1800
+      ]
+    },
+    "Crystal Bracelet": {
+      "Level": "46",
+      "icon": "https://wiki.metin2sg.com/images/6/61/B_Crystal_Bracelet.png",
+      "Attack Speed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "HP Regeneration": [
+        8,
+        10,
+        12,
+        15,
+        19,
+        24,
+        30,
+        36,
+        45,
+        56
+      ]
+    },
+    "Amethyst Bracelet": {
+      "Level": "50",
+      "icon": "https://wiki.metin2sg.com/images/7/78/B_Amethyst_Bracelet.png",
+      "Attack Speed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "SP Regeneration": [
+        8,
+        10,
+        12,
+        15,
+        19,
+        24,
+        30,
+        36,
+        45,
+        56
+      ]
+    },
+    "Heaven's Tear Bracelet": {
+      "Level": "54",
+      "icon": "https://wiki.metin2sg.com/images/5/55/B_Heaven%27s_Tear_Bracelet.png",
+      "Attack Speed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "Chance of Critical Hit": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Soul Crystal Bracelet": {
+      "Level": "58",
+      "icon": "https://wiki.metin2sg.com/images/b/b9/B_Soul_Crystal_Bracelet.png",
+      "Attack Speed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "Intelligence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Ruby Bracelet": {
+      "Level": "85",
+      "icon": "https://wiki.metin2sg.com/images/d/d9/B_Ruby_Bracelet.png",
+      "Attack Speed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15
+      ],
+      "Strong Against Warrior": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Garnet Bracelet": {
+      "Level": "90",
+      "icon": "https://wiki.metin2sg.com/images/2/28/B_Garnet_Bracelet.png",
+      "Attack Speed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15
+      ],
+      "Strong Against Assassin": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Emerald Bracelet": {
+      "Level": "95",
+      "icon": "https://wiki.metin2sg.com/images/1/11/B_Emerald_Bracelet.png",
+      "Attack Speed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15
+      ],
+      "Strong Against Sura": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Sapphire Bracelet": {
+      "Level": "100",
+      "icon": "https://wiki.metin2sg.com/images/7/77/B_Sapphire_Bracelet.png",
+      "Attack Speed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15
+      ],
+      "Strong Against Mages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  },
+  "Earrings": {
+    "Wooden Earrings": {
+      "Level": "0",
+      "icon": "https://wiki.metin2sg.com/images/4/47/B_Wooden_Earrings.png",
+      "Agility": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Copper Earrings": {
+      "Level": "8",
+      "icon": "https://wiki.metin2sg.com/images/2/26/B_Copper_Earrings.png",
+      "Strength": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Silver Earrings": {
+      "Level": "15",
+      "icon": "https://wiki.metin2sg.com/images/2/21/B_Silver_Earrings.png",
+      "Life Energy": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Golden Earrings": {
+      "Level": "22",
+      "icon": "https://wiki.metin2sg.com/images/8/8b/B_Golden_Earrings.png",
+      "Inteligence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Jade Earrings": {
+      "Level": "28",
+      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
+      "Agility": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "Max SP": [
+        10,
+        15,
+        20,
+        35,
+        50,
+        70,
+        110,
+        160,
+        230,
+        350
+      ]
+    },
+    "Ebony Earrings": {
+      "Level": "33",
+      "icon": "https://wiki.metin2sg.com/images/9/96/B_Ebony_Earrings.png",
+      "Strength": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "Max HP": [
+        25,
+        40,
+        60,
+        100,
+        150,
+        250,
+        400,
+        650,
+        1000,
+        1650
+      ]
+    },
+    "Pearl Earrings": {
+      "Level": "38",
+      "icon": "https://wiki.metin2sg.com/images/9/97/B_Pearl_Earrings.png",
+      "Life Energy": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "SP Regeneration": [
+        25,
+        40,
+        60,
+        100,
+        150,
+        250,
+        400,
+        650,
+        1000,
+        1650
+      ]
+    },
+    "White Gold Earrings": {
+      "Level": "42",
+      "icon": "https://wiki.metin2sg.com/images/b/b4/B_White_Gold_Earrings.png",
+      "Intelligence": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "HP Regeneration": [
+        25,
+        40,
+        60,
+        100,
+        150,
+        250,
+        400,
+        650,
+        1000,
+        1650
+      ]
+    },
+    "Crystal Earrings": {
+      "Level": "46",
+      "icon": "https://wiki.metin2sg.com/images/7/75/B_Crystal_Earrings.png",
+      "Agility": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "Defense": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Amethyst Earrings": {
+      "Level": "50",
+      "icon": "https://wiki.metin2sg.com/images/9/91/B_Amethyst_Earrings.png",
+      "Life Energy": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "Attack Value": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Heaven's Tear Earrings": {
+      "Level": "54",
+      "icon": "https://wiki.metin2sg.com/images/8/88/B_Heaven%27s_Tear_Earrings.png",
+      "Intelligence": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "Chance of Critical Hit": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5
+      ]
+    },
+    "Soul Crystal Earrings": {
+      "Level": "62",
+      "icon": "https://wiki.metin2sg.com/images/4/47/B_Soul_Crystal_Earrings.png",
+      "Agility": [
+        2,
+        3,
+        5,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "Strong Against Monster": [
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        11,
+        12,
+        13,
+        15
+      ]
+    },
+    "Ruby Earrings": {
+      "Level": "85",
+      "icon": "https://wiki.metin2sg.com/images/a/ad/B_Ruby_Earrings.png",
+      "Inteligence": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "Mas SP": [
+        10,
+        15,
+        20,
+        35,
+        50,
+        70,
+        110,
+        160,
+        230,
+        350
+      ],
+      "Skill Damage": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5
+      ]
+    },
+    "Garnet Earrings": {
+      "Level": "90",
+      "icon": "https://wiki.metin2sg.com/images/0/0e/B_Garnet_Earrings.png",
+      "Strenght": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "Mas HP": [
+        10,
+        15,
+        20,
+        35,
+        50,
+        70,
+        110,
+        160,
+        230,
+        350
+      ],
+      "Average Damage Resistance": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5
+      ]
+    },
+    "Emerald Earrings": {
+      "Level": "95",
+      "icon": "https://wiki.metin2sg.com/images/4/47/B_Emerald_Earrings.png",
+      "Agility": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "Average Skill Damage": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5
+      ],
+      "Average Damage Resistance": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5
+      ]
+    },
+    "Sapphire Earrings": {
+      "Level": "100",
+      "icon": "https://wiki.metin2sg.com/images/8/87/B_Sapphire_Earrings.png",
+      "Life Energy": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "Resistance Against Skill Damage": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5
+      ],
+      "Average Damage Resistance": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  },
+  "Assassin Helmets": {
+    "Leather Hood": {
+      "Level": "0",
+      "icon": "https://wiki.metin2sg.com/images/6/6a/B_Leather_Hood.png",
+      "Defense": [
+        5,
+        9,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37,
+        41
+      ]
+    },
+    "Chain Hood": {
+      "Level": "21",
+      "icon": "https://wiki.metin2sg.com/images/f/f6/B_Chain_Hood.png",
+      "Defense": [
+        9,
+        13,
+        17,
+        21,
+        25,
+        33,
+        41,
+        49,
+        57,
+        65
+      ]
+    },
+    "Steel Hood": {
+      "Level": "41",
+      "icon": "https://wiki.metin2sg.com/images/8/8f/B_Steel_Hood.png",
+      "Defense": [
+        13,
+        17,
+        21,
+        25,
+        29,
+        39,
+        49,
+        59,
+        69,
+        79
+      ]
+    },
+    "Orc Hood": {
+      "Level": "60",
+      "icon": "https://wiki.metin2sg.com/images/7/7b/B_Orc_Hood.png",
+      "Defense": [
+        17,
+        21,
+        25,
+        29,
+        39,
+        49,
+        59,
+        69,
+        79,
+        89
+      ],
+      "Chance to Block Physical Attacks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Spider Hood": {
+      "Level": "80",
+      "icon": "https://wiki.metin2sg.com/images/3/3d/B_Spider_Hood.png",
+      "Defense": [
+        21,
+        25,
+        29,
+        39,
+        49,
+        59,
+        69,
+        79,
+        89,
+        99
+      ],
+      "Max HP": [
+        50,
+        100,
+        150,
+        300,
+        450,
+        600,
+        800,
+        1000,
+        1200,
+        1500
+      ]
+    },
+    "Helm of Champions": {
+      "Level": "99",
+      "icon": "https://wiki.metin2sg.com/images/d/d9/B_Helm_of_Champions.png",
+      "Defense": [
+        99,
+        99,
+        99,
+        99,
+        99,
+        99,
+        99,
+        99,
+        99,
+        99
+      ],
+      "Max HP": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "Chance of Critical Hit": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ]
+    }
+  },
+  "Mage Helmets": {
+    "Monk Hat": {
+      "Level": "0",
+      "icon": "https://wiki.metin2sg.com/images/9/90/B_Monk_Hat.png",
+      "Defense": [
+        5,
+        9,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37,
+        41
+      ]
+    },
+    "Phoenix Hat": {
+      "Level": "21",
+      "icon": "https://wiki.metin2sg.com/images/6/65/B_Phoenix_Hat.png",
+      "Defense": [
+        9,
+        13,
+        17,
+        21,
+        25,
+        33,
+        41,
+        49,
+        57,
+        65
+      ]
+    },
+    "Sunlight Hat": {
+      "Level": "41",
+      "icon": "https://wiki.metin2sg.com/images/f/f5/B_Sunlight_Hat.png",
+      "Defense": [
+        13,
+        17,
+        21,
+        25,
+        29,
+        39,
+        49,
+        59,
+        69,
+        79
+      ]
+    },
+    "Cardinal's Hat": {
+      "Level": "60",
+      "icon": "https://wiki.metin2sg.com/images/1/15/B_Cardinal%27s_Hat.png",
+      "Defense": [
+        17,
+        21,
+        25,
+        29,
+        39,
+        49,
+        59,
+        69,
+        79,
+        89
+      ],
+      "Chance to Block Physical Attacks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Soul Shard Hat": {
+      "Level": "80",
+      "icon": "https://wiki.metin2sg.com/images/6/63/B_Soul_Shard_Hat.png",
+      "Defense": [
+        21,
+        25,
+        29,
+        39,
+        49,
+        59,
+        69,
+        79,
+        89,
+        99
+      ],
+      "Max HP": [
+        50,
+        100,
+        150,
+        300,
+        450,
+        600,
+        800,
+        1000,
+        1200,
+        1500
+      ]
+    },
+    "Helm of Champions": {
+      "Level": "99",
+      "icon": "https://wiki.metin2sg.com/images/d/d9/B_Helm_of_Champions.png",
+      "Defense": [
+        99,
+        99,
+        99,
+        99,
+        99,
+        99,
+        99,
+        99,
+        99,
+        99
+      ],
+      "Max HP": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "Chance of Critical Hit": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ]
+    }
+  },
+  "Sura Helmets": {
+    "Bloody Helm": {
+      "Level": "0",
+      "icon": "https://wiki.metin2sg.com/images/8/85/B_Bloody_Helm.png",
+      "Defense": [
+        5,
+        9,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37,
+        41
+      ]
+    },
+    "Mocking Helm": {
+      "Level": "21",
+      "icon": "https://wiki.metin2sg.com/images/d/da/B_Mocking_Helm.png",
+      "Defense": [
+        9,
+        13,
+        17,
+        21,
+        25,
+        33,
+        41,
+        49,
+        57,
+        65
+      ]
+    },
+    "Castle Helm": {
+      "Level": "41",
+      "icon": "https://wiki.metin2sg.com/images/1/1f/B_Castle_Helm.png",
+      "Defense": [
+        13,
+        17,
+        21,
+        25,
+        29,
+        39,
+        49,
+        59,
+        69,
+        79
+      ]
+    },
+    "Horned Helm": {
+      "Level": "60",
+      "icon": "https://wiki.metin2sg.com/images/b/b0/B_Horned_Helmet.png",
+      "Defense": [
+        17,
+        21,
+        25,
+        29,
+        39,
+        49,
+        59,
+        69,
+        79,
+        89
+      ],
+      "Chance to Block Physical Attacks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Magic Helmet": {
+      "Level": "80",
+      "icon": "https://wiki.metin2sg.com/images/b/b6/B_Magic_Helmet.png",
+      "Defense": [
+        21,
+        25,
+        29,
+        39,
+        49,
+        59,
+        69,
+        79,
+        89,
+        99
+      ],
+      "Max HP": [
+        50,
+        100,
+        150,
+        300,
+        450,
+        600,
+        800,
+        1000,
+        1200,
+        1500
+      ]
+    },
+    "Helm of Champions": {
+      "Level": "99",
+      "icon": "https://wiki.metin2sg.com/images/d/d9/B_Helm_of_Champions.png",
+      "Defense": [
+        99,
+        99,
+        99,
+        99,
+        99,
+        99,
+        99,
+        99,
+        99,
+        99
+      ],
+      "Max HP": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "Chance of Critical Hit": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ]
+    }
+  },
+  "Warrior Helmets": {
+    "Traditional Helm": {
+      "Level": "0",
+      "icon": "https://wiki.metin2sg.com/images/5/50/B_Traditional_Helm.png",
+      "Defense": [
+        5,
+        9,
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37,
+        41
+      ]
+    },
+    "Iron Helm": {
+      "Level": "21",
+      "icon": "https://wiki.metin2sg.com/images/a/a7/B_Iron_Helm.png",
+      "Defense": [
+        9,
+        13,
+        17,
+        21,
+        25,
+        33,
+        41,
+        49,
+        57,
+        65
+      ]
+    },
+    "Ghost Mask Sallet": {
+      "Level": "41",
+      "icon": "https://wiki.metin2sg.com/images/1/18/B_Ghost_Mask_Sallet.png",
+      "Defense": [
+        13,
+        17,
+        21,
+        25,
+        29,
+        39,
+        49,
+        59,
+        69,
+        79
+      ]
+    },
+    "Fear mask": {
+      "Level": "60",
+      "icon": "https://wiki.metin2sg.com/images/d/d5/B_Fear_Mask.png",
+      "Defense": [
+        17,
+        21,
+        25,
+        29,
+        39,
+        49,
+        59,
+        69,
+        79,
+        89
+      ],
+      "Chance to Block Physical Attacks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "War Master Helmet": {
+      "Level": "80",
+      "icon": "https://wiki.metin2sg.com/images/5/54/B_War_Master_Helmet.png",
+      "Defense": [
+        21,
+        25,
+        29,
+        39,
+        49,
+        59,
+        69,
+        79,
+        89,
+        99
+      ],
+      "Max HP": [
+        50,
+        100,
+        150,
+        300,
+        450,
+        600,
+        800,
+        1000,
+        1200,
+        1500
+      ]
+    },
+    "Helm of Champions": {
+      "Level": "99",
+      "icon": "https://wiki.metin2sg.com/images/d/d9/B_Helm_of_Champions.png",
+      "Defense": [
+        99,
+        99,
+        99,
+        99,
+        99,
+        99,
+        99,
+        99,
+        99,
+        99
+      ],
+      "Max HP": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "Chance of Critical Hit": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ]
+    }
+  },
+  "Assassin Armours": {
+    "Azure Suit": {
+      "Level": "0",
+      "icon": "https://wiki.metin2sg.com/images/f/f4/B_Azure_Suit.png",
+      "Defense": [
+        12,
+        18,
+        24,
+        30,
+        36,
+        42,
+        48,
+        54,
+        60,
+        66
+      ]
+    },
+    "Ivory Suit": {
+      "Level": "9",
+      "icon": "https://wiki.metin2sg.com/images/8/83/B_Ivory_Suit.png",
+      "Defense": [
+        21,
+        27,
+        33,
+        39,
+        45,
+        51,
+        57,
+        63,
+        69,
+        75
+      ],
+      "Movement Speed": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ]
+    },
+    "Crimson Suit": {
+      "Level": "18",
+      "icon": "https://wiki.metin2sg.com/images/b/b5/B_Crimson_Suit.png",
+      "Defense": [
+        29,
+        35,
+        41,
+        47,
+        53,
+        59,
+        65,
+        71,
+        77,
+        83
+      ],
+      "Movement Speed": [
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3
+      ]
+    },
+    "Red Ant Suit": {
+      "Level": "26",
+      "icon": "https://wiki.metin2sg.com/images/4/44/B_Red_Ant_Suit.png",
+      "Defense": [
+        38,
+        44,
+        50,
+        56,
+        62,
+        68,
+        74,
+        80,
+        86,
+        92
+      ],
+      "Movement Speed": [
+        -5,
+        -5,
+        -5,
+        -5,
+        -5,
+        -5,
+        -5,
+        -5,
+        -5,
+        -5
+      ]
+    },
+    "Ant Lion Suit": {
+      "Level": "34",
+      "icon": "https://wiki.metin2sg.com/images/b/b1/B_Ant_Lion_Suit.png",
+      "Defense": [
+        47,
+        53,
+        59,
+        65,
+        71,
+        77,
+        83,
+        89,
+        95,
+        101
+      ],
+      "Movement Speed": [
+        -7,
+        -7,
+        -7,
+        -7,
+        -7,
+        -7,
+        -7,
+        -7,
+        -7,
+        -7
+      ]
+    },
+    "Assassin Suit": {
+      "Level": "42",
+      "icon": "https://wiki.metin2sg.com/images/0/0d/B_Assassin_Suit.png",
+      "Defense": [
+        55,
+        61,
+        67,
+        73,
+        79,
+        85,
+        91,
+        97,
+        103,
+        109
+      ],
+      "Movement Speed": [
+        -8,
+        -8,
+        -8,
+        -8,
+        -8,
+        -8,
+        -8,
+        -8,
+        -8,
+        -8
+      ]
+    },
+    "Young Dragon Suit": {
+      "Level": "48",
+      "icon": "https://wiki.metin2sg.com/images/d/db/B_Young_Dragon_Suit.png",
+      "Defense": [
+        64,
+        70,
+        76,
+        82,
+        88,
+        94,
+        100,
+        106,
+        112,
+        118
+      ],
+      "Movement Speed": [
+        -10,
+        -10,
+        -10,
+        -10,
+        -10,
+        -10,
+        -10,
+        -10,
+        -10,
+        -10
+      ]
+    },
+    "Killer Wind Suit": {
+      "Level": "54",
+      "icon": "https://wiki.metin2sg.com/images/3/36/B_Killer_Wind_Suit.png",
+      "Defense": [
+        72,
+        78,
+        84,
+        90,
+        96,
+        102,
+        108,
+        114,
+        120,
+        126
+      ],
+      "Movement Speed": [
+        -12,
+        -12,
+        -12,
+        -12,
+        -12,
+        -12,
+        -12,
+        -12,
+        -12,
+        -12
+      ]
+    },
+    "Fuchsia Suit": {
+      "Level": "61",
+      "icon": "https://wiki.metin2sg.com/images/f/f8/B_Fuchsia_Suit.png",
+      "Defense": [
+        81,
+        87,
+        93,
+        99,
+        105,
+        111,
+        117,
+        123,
+        129,
+        135
+      ],
+      "Movement Speed": [
+        -13,
+        -13,
+        -13,
+        -13,
+        -13,
+        -13,
+        -13,
+        -13,
+        -13,
+        -13
+      ]
+    },
+    "Black Wind Suit": {
+      "Level": "66-70",
+      "icon": "https://wiki.metin2sg.com/images/4/43/B_Black_Wind_Suit.png",
+      "Defense": [
+        90,
+        96,
+        102,
+        108,
+        114,
+        120,
+        126,
+        132,
+        138,
+        144
+      ],
+      "Movement Speed": [
+        15,
+        -14,
+        -13,
+        -12,
+        -11,
+        -10,
+        -9,
+        -8,
+        -7,
+        -6
+      ],
+      "Magic Resistance": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        12,
+        15,
+        20
+      ]
+    },
+    "Aqua Suit": {
+      "Level": "80-90",
+      "icon": "https://wiki.metin2sg.com/images/c/cc/B_Aqua_Suit.png",
+      "Defense": [
+        154,
+        164,
+        174,
+        184,
+        194,
+        204,
+        214,
+        224,
+        234,
+        244
+      ],
+      "Resistance to Demi-Human": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        13,
+        15
+      ],
+      "Magic Resistance": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    "Dragon Rider Suit": {
+      "Level": "90-105",
+      "icon": "https://wiki.metin2sg.com/images/c/cf/B_Dragon_Rider_Suit.png",
+      "Defense": [
+        170,
+        190,
+        210,
+        230,
+        250,
+        270,
+        290,
+        310,
+        330,
+        350
+      ],
+      "Average Damage Resistance": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "Magic Resistance": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "Max HP": [
+        1,
+        2,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10
+      ]
+    },
+    "Ambush Suit": {
+      "Level": "105-115",
+      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
+      "Defense": [
+        140,
+        150,
+        154,
+        160,
+        170,
+        184,
+        204,
+        234,
+        276,
+        340
+      ],
+      "Average Damage Resistance": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        20
+      ],
+      "Magic Resistance": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        20
+      ],
+      "Strong against Monster": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Blood Moon Suit": {
+      "Level": "105-115",
+      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
+      "Defense": [
+        140,
+        150,
+        154,
+        160,
+        170,
+        184,
+        204,
+        234,
+        276,
+        340
+      ],
+      "Average Damage Resistance": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        20
+      ],
+      "Magic Resistance": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        20
+      ],
+      "Strong against Monster": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Metamorphosis Suit": {
+      "Level": "105-115",
+      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
+      "Defense": [
+        140,
+        150,
+        154,
+        160,
+        170,
+        184,
+        204,
+        234,
+        276,
+        340
+      ],
+      "Magic Resistance": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "Resistance to Demi-Human": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15
+      ],
+      "Strong Against Demi-Human": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        14,
+        20
+      ]
+    },
+    "Night of Death Suit": {
+      "Level": "105-115",
+      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
+      "Defense": [
+        140,
+        150,
+        154,
+        160,
+        170,
+        184,
+        204,
+        234,
+        276,
+        340
+      ],
+      "Magic Resistance": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "Resistance to Demi-Human": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15
+      ],
+      "Strong Against Demi-Human": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        14,
+        20
+      ]
+    },
+    "Red Hwang Armour": {
+      "Level": "50",
+      "icon": "https://wiki.metin2sg.com/images/7/7f/B_Red_Hwang_Armour.png",
+      "Defense": [
+        550,
+        550,
+        550,
+        550,
+        550,
+        550,
+        550,
+        550,
+        550,
+        550
+      ],
+      "Moving Speed": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "Magic Resistance": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "Strong Against Demi-Human": [
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15
+      ]
+    }
+  },
+  "Mage Armours": {
+    "Azure Dress": {
+      "Level": "0",
+      "icon": "https://wiki.metin2sg.com/images/d/d2/B_Azure_Dress.png",
+      "Defense": [
+        12,
+        18,
+        24,
+        30,
+        36,
+        42,
+        48,
+        54,
+        60,
+        66
+      ]
+    },
+    "Turquoise Dress": {
+      "Level": "9",
+      "icon": "https://wiki.metin2sg.com/images/8/85/B_Turquoise_Dress.png",
+      "Defense": [
+        21,
+        27,
+        33,
+        39,
+        45,
+        51,
+        57,
+        63,
+        69,
+        75
+      ],
+      "Movement Speed": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ]
+    },
+    "Pink Dress": {
+      "Level": "18",
+      "icon": "https://wiki.metin2sg.com/images/e/ec/B_Pink_Dress.png",
+      "Defense": [
+        29,
+        35,
+        41,
+        47,
+        53,
+        59,
+        65,
+        71,
+        77,
+        83
+      ],
+      "Movement Speed": [
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3
+      ]
+    },
+    "Amorous Dress": {
+      "Level": "26",
+      "icon": "https://wiki.metin2sg.com/images/a/af/B_Amorous_Dress.png",
+      "Defense": [
+        38,
+        44,
+        50,
+        56,
+        62,
+        68,
+        74,
+        80,
+        86,
+        92
+      ],
+      "Movement Speed": [
+        -5,
+        -5,
+        -5,
+        -5,
+        -5,
+        -5,
+        -5,
+        -5,
+        -5,
+        -5
+      ]
+    },
+    "Western Sky Dress": {
+      "Level": "34",
+      "icon": "https://wiki.metin2sg.com/images/6/6d/B_Western_Sky_Dress.png",
+      "Defense": [
+        47,
+        53,
+        59,
+        65,
+        71,
+        77,
+        83,
+        89,
+        95,
+        101
+      ],
+      "Movement Speed": [
+        -7,
+        -7,
+        -7,
+        -7,
+        -7,
+        -7,
+        -7,
+        -7,
+        -7,
+        -7
+      ]
+    },
+    "Solar Dress": {
+      "Level": "42",
+      "icon": "https://wiki.metin2sg.com/images/f/f7/B_Solar_Dress.png",
+      "Defense": [
+        55,
+        61,
+        67,
+        73,
+        79,
+        85,
+        91,
+        97,
+        103,
+        109
+      ],
+      "Movement Speed": [
+        -8,
+        -8,
+        -8,
+        -8,
+        -8,
+        -8,
+        -8,
+        -8,
+        -8,
+        -8
+      ]
+    },
+    "Moral Dress": {
+      "Level": "48",
+      "icon": "https://wiki.metin2sg.com/images/f/f5/B_Moral_Dress.png",
+      "Defense": [
+        64,
+        70,
+        76,
+        82,
+        88,
+        94,
+        100,
+        106,
+        112,
+        118
+      ],
+      "Movement Speed": [
+        -10,
+        -10,
+        -10,
+        -10,
+        -10,
+        -10,
+        -10,
+        -10,
+        -10,
+        -10
+      ]
+    },
+    "Orange Cat Dress": {
+      "Level": "54",
+      "icon": "https://wiki.metin2sg.com/images/3/3b/B_Orange_Cat_Dress.png",
+      "Defense": [
+        72,
+        78,
+        84,
+        90,
+        96,
+        102,
+        108,
+        114,
+        120,
+        126
+      ],
+      "Movement Speed": [
+        -12,
+        -12,
+        -12,
+        -12,
+        -12,
+        -12,
+        -12,
+        -12,
+        -12,
+        -12
+      ]
+    },
+    "Baroness Dress": {
+      "Level": "61",
+      "icon": "https://wiki.metin2sg.com/images/4/4f/B_Baroness_Dress.png",
+      "Defense": [
+        81,
+        87,
+        93,
+        99,
+        105,
+        111,
+        117,
+        123,
+        129,
+        135
+      ],
+      "Movement Speed": [
+        -13,
+        -13,
+        -13,
+        -13,
+        -13,
+        -13,
+        -13,
+        -13,
+        -13,
+        -13
+      ]
+    },
+    "Black Tunic": {
+      "Level": "66-70",
+      "icon": "https://wiki.metin2sg.com/images/3/3f/B_Black_Tunic.png",
+      "Defense": [
+        90,
+        96,
+        102,
+        108,
+        114,
+        120,
+        126,
+        132,
+        138,
+        144
+      ],
+      "Movement Speed": [
+        15,
+        -14,
+        -13,
+        -12,
+        -11,
+        -10,
+        -9,
+        -8,
+        -7,
+        -6
+      ],
+      "Magic Resistance": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        12,
+        15,
+        20
+      ]
+    },
+    "Aqua Tunic": {
+      "Level": "80-90",
+      "icon": "https://wiki.metin2sg.com/images/a/a3/B_Aqua_Tunic.png",
+      "Defense": [
+        154,
+        164,
+        174,
+        184,
+        194,
+        204,
+        214,
+        224,
+        234,
+        244
+      ],
+      "Resistance to Demi-Human": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        13,
+        15
+      ],
+      "Magic Resistance": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    "Golden Clothing": {
+      "Level": "86-100",
+      "icon": "https://wiki.metin2sg.com/images/e/e5/B_Golden_Clothing.png",
+      "Defense": [
+        170,
+        190,
+        210,
+        230,
+        250,
+        270,
+        290,
+        310,
+        330,
+        350
+      ],
+      "Average Damage Resistance": [
+        8,
+        9,
+        10,
+        11,
+        13,
+        15,
+        17,
+        19,
+        22,
+        25
+      ],
+      "Magic Resistance": [
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        27,
+        30
+      ],
+      "Max HP": [
+        1,
+        2,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10
+      ]
+    },
+    "Clothing of Faith": {
+      "Level": "105-115",
+      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
+      "Defense": [
+        140,
+        150,
+        154,
+        160,
+        170,
+        184,
+        204,
+        234,
+        276,
+        340
+      ],
+      "Average Damage Resistance": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        20
+      ],
+      "Magic Resistance": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        20
+      ],
+      "Strong against Monster": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Fire Clothing": {
+      "Level": "105-115",
+      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
+      "Defense": [
+        140,
+        150,
+        154,
+        160,
+        170,
+        184,
+        204,
+        234,
+        276,
+        340
+      ],
+      "Average Damage Resistance": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        20
+      ],
+      "Magic Resistance": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        20
+      ],
+      "Strong against Monster": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Clothing of Harmony": {
+      "Level": "105-115",
+      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
+      "Defense": [
+        140,
+        150,
+        154,
+        160,
+        170,
+        184,
+        204,
+        234,
+        276,
+        340
+      ],
+      "Magic Resistance": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "Resistance to Demi-Human": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15
+      ],
+      "Strong Against Demi-Human": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        14,
+        20
+      ]
+    },
+    "Moon Clothing": {
+      "Level": "105-115",
+      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
+      "Defense": [
+        140,
+        150,
+        154,
+        160,
+        170,
+        184,
+        204,
+        234,
+        276,
+        340
+      ],
+      "Magic Resistance": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "Resistance to Demi-Human": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15
+      ],
+      "Strong Against Demi-Human": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        14,
+        20
+      ]
+    },
+    "Sang-Hwang Armour": {
+      "Level": "50",
+      "icon": "https://wiki.metin2sg.com/images/f/f5/B_Sang-Hwang_Armour.png",
+      "Defense": [
+        550,
+        550,
+        550,
+        550,
+        550,
+        550,
+        550,
+        550,
+        550,
+        550
+      ],
+      "Moving Speed": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "Magic Resistance": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "Strong Against Demi-Human": [
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15
+      ]
+    }
+  },
   "Sura Armours": {
     "Requiem Plate Armour": {
       "Level": "0",
@@ -3938,7 +4584,7 @@ var gamedata={
         20
       ]
     },
-    "Bone Plated Armor": {
+    "Bone Plated Armour": {
       "Level": "86-100",
       "icon": "https://wiki.metin2sg.com/images/6/60/B_Bone_Plated_Armor.png",
       "Defense": [
@@ -3988,6 +4634,214 @@ var gamedata={
         7,
         8,
         10
+      ]
+    },
+    "Devil Claw Armour": {
+      "Level": "105-115",
+      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
+      "Defense": [
+        140,
+        150,
+        154,
+        160,
+        170,
+        184,
+        204,
+        234,
+        276,
+        340
+      ],
+      "Average Damage Resistance": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        20
+      ],
+      "Magic Resistance": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        20
+      ],
+      "Strong against Monster": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Hellrider Armour": {
+      "Level": "105-115",
+      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
+      "Defense": [
+        140,
+        150,
+        154,
+        160,
+        170,
+        184,
+        204,
+        234,
+        276,
+        340
+      ],
+      "Average Damage Resistance": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        20
+      ],
+      "Magic Resistance": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        20
+      ],
+      "Strong against Monster": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Ghost Lantern Armour": {
+      "Level": "105-115",
+      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
+      "Defense": [
+        140,
+        150,
+        154,
+        160,
+        170,
+        184,
+        204,
+        234,
+        276,
+        340
+      ],
+      "Magic Resistance": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "Resistance to Demi-Human": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15
+      ],
+      "Strong Against Demi-Human": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        14,
+        20
+      ]
+    },
+    "Black Fire Armour": {
+      "Level": "105-115",
+      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
+      "Defense": [
+        140,
+        150,
+        154,
+        160,
+        170,
+        184,
+        204,
+        234,
+        276,
+        340
+      ],
+      "Magic Resistance": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "Resistance to Demi-Human": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15
+      ],
+      "Strong Against Demi-Human": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        14,
+        20
       ]
     },
     "Zin-Hwang Armour": {
@@ -4040,152 +4894,6 @@ var gamedata={
         15,
         15,
         15
-      ]
-    }
-  },
-  "Sura Helmets": {
-    "Bloody Helm": {
-      "Level": "0",
-      "icon": "https://wiki.metin2sg.com/images/8/85/B_Bloody_Helm.png",
-      "Defense": [
-        5,
-        9,
-        13,
-        17,
-        21,
-        25,
-        29,
-        33,
-        37,
-        41
-      ]
-    },
-    "Mocking Helm": {
-      "Level": "21",
-      "icon": "https://wiki.metin2sg.com/images/d/da/B_Mocking_Helm.png",
-      "Defense": [
-        9,
-        13,
-        17,
-        21,
-        25,
-        33,
-        41,
-        49,
-        57,
-        65
-      ]
-    },
-    "Castle Helm": {
-      "Level": "41",
-      "icon": "https://wiki.metin2sg.com/images/1/1f/B_Castle_Helm.png",
-      "Defense": [
-        13,
-        17,
-        21,
-        25,
-        29,
-        39,
-        49,
-        59,
-        69,
-        79
-      ]
-    },
-    "Horned Helm": {
-      "Level": "60",
-      "icon": "https://wiki.metin2sg.com/images/b/b0/B_Horned_Helmet.png",
-      "Defense": [
-        17,
-        21,
-        25,
-        29,
-        39,
-        49,
-        59,
-        69,
-        79,
-        89
-      ],
-      "Chance to Block Physical Attacks": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    },
-    "Magic Helmet": {
-      "Level": "80",
-      "icon": "https://wiki.metin2sg.com/images/b/b6/B_Magic_Helmet.png",
-      "Defense": [
-        21,
-        25,
-        29,
-        39,
-        49,
-        59,
-        69,
-        79,
-        89,
-        99
-      ],
-      "Max HP": [
-        50,
-        100,
-        150,
-        300,
-        450,
-        600,
-        800,
-        1000,
-        1200,
-        1500
-      ]
-    },
-    "Helm of Champions": {
-      "Level": "99",
-      "icon": "https://wiki.metin2sg.com/images/d/d9/B_Helm_of_Champions.png",
-      "Defense": [
-        99,
-        99,
-        99,
-        99,
-        99,
-        99,
-        99,
-        99,
-        99,
-        99
-      ],
-      "Max HP": [
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000
-      ],
-      "Chance of Critical Hit": [
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10
       ]
     }
   },
@@ -4562,6 +5270,214 @@ var gamedata={
         10
       ]
     },
+    "Aurora Armour": {
+      "Level": "105-115",
+      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
+      "Defense": [
+        140,
+        150,
+        154,
+        160,
+        170,
+        184,
+        204,
+        234,
+        276,
+        340
+      ],
+      "Average Damage Resistance": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        20
+      ],
+      "Magic Resistance": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        20
+      ],
+      "Strong against Monster": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Magma Glow Armour": {
+      "Level": "105-115",
+      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
+      "Defense": [
+        140,
+        150,
+        154,
+        160,
+        170,
+        184,
+        204,
+        234,
+        276,
+        340
+      ],
+      "Average Damage Resistance": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        20
+      ],
+      "Magic Resistance": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        20
+      ],
+      "Strong against Monster": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "Whalebone Armour": {
+      "Level": "105-115",
+      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
+      "Defense": [
+        140,
+        150,
+        154,
+        160,
+        170,
+        184,
+        204,
+        234,
+        276,
+        340
+      ],
+      "Magic Resistance": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "Resistance to Demi-Human": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15
+      ],
+      "Strong Against Demi-Human": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        14,
+        20
+      ]
+    },
+    "Fallout Armour": {
+      "Level": "105-115",
+      "icon": "https://softchamp.s3.amazonaws.com/icon/1624353283.png",
+      "Defense": [
+        140,
+        150,
+        154,
+        160,
+        170,
+        184,
+        204,
+        234,
+        276,
+        340
+      ],
+      "Magic Resistance": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "Resistance to Demi-Human": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15
+      ],
+      "Strong Against Demi-Human": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        14,
+        20
+      ]
+    },
     "Hwang Armour": {
       "Level": "50",
       "icon": "https://wiki.metin2sg.com/images/3/39/B_Hwang_Armour.png",
@@ -4612,298 +5528,6 @@ var gamedata={
         15,
         15,
         15
-      ]
-    }
-  },
-  "Warrior Helmets": {
-    "Traditional Helm": {
-      "Level": "0",
-      "icon": "https://wiki.metin2sg.com/images/5/50/B_Traditional_Helm.png",
-      "Defense": [
-        5,
-        9,
-        13,
-        17,
-        21,
-        25,
-        29,
-        33,
-        37,
-        41
-      ]
-    },
-    "Iron Helm": {
-      "Level": "21",
-      "icon": "https://wiki.metin2sg.com/images/a/a7/B_Iron_Helm.png",
-      "Defense": [
-        9,
-        13,
-        17,
-        21,
-        25,
-        33,
-        41,
-        49,
-        57,
-        65
-      ]
-    },
-    "Ghost Mask Sallet": {
-      "Level": "41",
-      "icon": "https://wiki.metin2sg.com/images/1/18/B_Ghost_Mask_Sallet.png",
-      "Defense": [
-        13,
-        17,
-        21,
-        25,
-        29,
-        39,
-        49,
-        59,
-        69,
-        79
-      ]
-    },
-    "Fear mask": {
-      "Level": "60",
-      "icon": "https://wiki.metin2sg.com/images/d/d5/B_Fear_Mask.png",
-      "Defense": [
-        17,
-        21,
-        25,
-        29,
-        39,
-        49,
-        59,
-        69,
-        79,
-        89
-      ],
-      "Chance to Block Physical Attacks": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    },
-    "War Master Helmet": {
-      "Level": "80",
-      "icon": "https://wiki.metin2sg.com/images/5/54/B_War_Master_Helmet.png",
-      "Defense": [
-        21,
-        25,
-        29,
-        39,
-        49,
-        59,
-        69,
-        79,
-        89,
-        99
-      ],
-      "Max HP": [
-        50,
-        100,
-        150,
-        300,
-        450,
-        600,
-        800,
-        1000,
-        1200,
-        1500
-      ]
-    },
-    "Helm of Champions": {
-      "Level": "99",
-      "icon": "https://wiki.metin2sg.com/images/d/d9/B_Helm_of_Champions.png",
-      "Defense": [
-        99,
-        99,
-        99,
-        99,
-        99,
-        99,
-        99,
-        99,
-        99,
-        99
-      ],
-      "Max HP": [
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000,
-        1000
-      ],
-      "Chance of Critical Hit": [
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10,
-        10
-      ]
-    }
-  },
-  "Belts": {
-    "Copper Belt": {
-      "Level": "50",
-      "icon": "https://wiki.metin2sg.com/images/7/76/B_Copper_Belt.png",
-      "Max HP": [
-        50,
-        50,
-        60,
-        70,
-        80,
-        90,
-        100,
-        200,
-        300,
-        500
-      ]
-    },
-    "Silver Belt": {
-      "Level": "70",
-      "icon": "https://wiki.metin2sg.com/images/d/d0/B_Silver_Belt.png",
-      "Max SP": [
-        10,
-        10,
-        20,
-        30,
-        40,
-        50,
-        60,
-        80,
-        100,
-        200
-      ]
-    },
-    "Golden Belt": {
-      "Level": "85",
-      "icon": "https://wiki.metin2sg.com/images/c/c5/B_Golden_Belt.png",
-      "Chance to drop double Gold": [
-        1,
-        1,
-        1,
-        2,
-        2,
-        2,
-        3,
-        3,
-        4,
-        5
-      ]
-    },
-    "White Gold Belt": {
-      "Level": "97",
-      "icon": "https://wiki.metin2sg.com/images/0/0f/B_White_Gold_Belt.png",
-      "Chance for EXP bonus": [
-        1,
-        1,
-        1,
-        2,
-        2,
-        2,
-        3,
-        3,
-        4,
-        5
-      ]
-    },
-    "Soul Crystal Belt": {
-      "Level": "100",
-      "icon": "https://wiki.metin2sg.com/images/3/3c/B_Soul_Crystal_Belt.png",
-      "Strong against Monster": [
-        1,
-        1,
-        1,
-        2,
-        2,
-        2,
-        3,
-        3,
-        4,
-        5
-      ]
-    },
-    "Garnet Belt": {
-      "Level": "103",
-      "icon": "https://wiki.metin2sg.com/images/e/e9/B_Garnet_Belt.png",
-      "Resistance to Warrior Attack": [
-        1,
-        1,
-        1,
-        2,
-        2,
-        2,
-        3,
-        3,
-        4,
-        5
-      ]
-    },
-    "Ruby Belt": {
-      "Level": "103",
-      "icon": "https://wiki.metin2sg.com/images/8/89/B_Ruby_Belt.png",
-      "Resistance to Assassin Attack": [
-        1,
-        1,
-        1,
-        2,
-        2,
-        2,
-        3,
-        3,
-        4,
-        5
-      ]
-    },
-    "Emerald Belt": {
-      "Level": "103",
-      "icon": "https://wiki.metin2sg.com/images/f/fd/B_Emerald_Belt.png",
-      "Resistance to Sura Attack": [
-        1,
-        1,
-        1,
-        2,
-        2,
-        2,
-        3,
-        3,
-        4,
-        5
-      ]
-    },
-    "Sapphire Belt": {
-      "Level": "103",
-      "icon": "https://wiki.metin2sg.com/images/7/75/B_Sapphire_Belt.png",
-      "Resistance to Mage Attack": [
-        1,
-        1,
-        1,
-        2,
-        2,
-        2,
-        3,
-        3,
-        4,
-        5
       ]
     }
   }

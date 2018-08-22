@@ -31,26 +31,8 @@ function selectMain(elem) {
 }
 
 function DisplayItems() {
-	modalbody.innerHTML = "";
-	var data = grabSelectedData();
-	var keys = Object.keys(data);
-	var entry;
-	for (var i = 0,l=keys.length; i < l; i++) {
-		entry = data[keys[i]];
-		modalbody.innerHTML +=
-		'<div class="item" onclick="selectItem(\''+keys[i]+'\')">' +
-		'<section>'+
-		'<div class="leftdiv">'+ //LEFT
-		'<img src="'+ entry.icon + '" />'+
-		'</div>'+
-		'<div class="rightdiv">'+ // RIGHT
-		'<p class="item-name">'+keys[i]+'<p>' +
-		fetchMiscData(data[keys[i]]) +
-		'</div>' +
-		'</section>'+
-		'</div>';
-	}
-	
+	plusSlider.value = 0;
+	ChangePlus(plusSlider.value);
 }
 
 function fetchMiscData(data){
@@ -64,15 +46,36 @@ function fetchMiscData(data){
 	return text;
 }
 
-function grabSelectedData() {
+function fetchMiscDataByPlus(data, plus){
+	var text ="";
+	var keys = Object.keys(data);
+	var keyName;
+	for (var i = 0,l=keys.length; i < l; i++) {
+		keyName = keys[i];
+		if (keyName != "icon") {
+			if (keyName == "Level") {
+				text += '<p class="item-data">' + keyName + ": " + data[keys[i]] + '<p>';	
+			} else {
+				text += '<p class="item-data">' + keyName + ": " + data[keys[i]][plus] + '<p>';
+			}
+		}
+	}
+	return text;
+}
+
+function getSelectedName() {
 	if (selectedSlot.id == "Helmets" || selectedSlot.id == "Armours"){
-		return  gamedata[selectedMain + " " + selectedSlot.id];
+		return  selectedMain + " " + selectedSlot.id;
 	} else if (selectedSlot.id == "weapon") {
 		console.log("grabSelectedData: weapons in development");
 		statusLabel.innerHTML = "grabSelectedData: weapons in development";
 	} else {
-		return  gamedata[selectedSlot.id];
+		return selectedSlot.id;
 	}
+}
+
+function grabSelectedData() {
+	return  gamedata[getSelectedName()];
 }
 
 function selectItem(itemName){
@@ -121,6 +124,30 @@ function clearMainItems() {
 	document.getElementById("Helmets").innerHTML = "";
 	document.getElementById("weapon").innerHTML = "";
 	document.getElementById("Armours").innerHTML = "";
+}
+
+function ChangePlus(plus) {
+	modalbody.innerHTML = "";
+	var data = grabSelectedData();
+	var keys = Object.keys(data);
+	var entry, keyName;
+	for (var i = 0,l=keys.length; i < l; i++) {
+		keyName = keys[i];
+		entry = data[keyName];
+		modalbody.innerHTML +=
+		'<div class="item" onclick="selectItem(\'' + keyName + '\')">' +
+		'<section>' +
+		'<div class="leftdiv height' + (Object.keys(entry).length) + '">' + //LEFT
+		'<img src="'+ entry.icon + '" />'+
+		'</div>' +
+		'<div class="rightdiv">'+ // RIGHT
+		'<p class="item-name">' + keyName + '<p>' +
+		fetchMiscDataByPlus(entry, plus) +
+		'</div>' +
+		'</section>'+
+		'</div>';
+	}
+	equipmentPiece.innerHTML = getSelectedName() + " +" + plus;
 }
 
 function CalculateData() {

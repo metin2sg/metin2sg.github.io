@@ -22,6 +22,7 @@
     width: 80%;
     max-height: calc(100vh - 210px);
     overflow-y: auto;
+    top: -10px;
 }
 
 /* The Close Button */
@@ -41,4 +42,14 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.modal-header {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
 }

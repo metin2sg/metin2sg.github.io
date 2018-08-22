@@ -136,6 +136,8 @@ section{
     overflow: auto;
     cursor: pointer;
     border-radius: 10px;
+    width: 275px;
+    float: left;
 }
 
 .modal-content .leftdiv {
@@ -154,4 +156,28 @@ section{
     width: auto;
     height: auto;
     line-height: 1px;
+}
+
+.height5 {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.height6 {
+    min-height: 96px;
+    display: flex;
+    align-items: center;
+}
+
+.height7 {
+    min-height: 112px;
+    display: flex;
+    align-items: center;
+}
+
+.height8 {
+    min-height: 128px;
+    display: flex;
+    align-items: center;
 }
