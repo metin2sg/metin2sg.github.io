@@ -14,8 +14,8 @@ function init() {
 	stats.innerHTML = "No Data";
 	initModal();
 
-	var siteWidth = 500;
-	var scale = screen.width /siteWidth
+	var siteWidth = 400;
+	var scale = screen.width / siteWidth;
 
 	document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
 }
