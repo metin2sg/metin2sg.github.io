@@ -65,7 +65,7 @@ function fetchMiscDataByPlus(data, plus){
 	for (var i = 0,l=keys.length; i < l; i++) {
 		keyName = keys[i];
 		if (keyName != "icon") {
-			if (keyName == "Level") {
+			if (keyName == "Level" || keyName == "Name") {
 				text += '<p class="item-data">' + keyName + ": " + data[keys[i]] + '<p>';	
 			} else {
 				text += '<p class="item-data">' + keyName + ": " + data[keys[i]][plus] + '<p>';
@@ -95,13 +95,11 @@ function selectItem(itemName){
 	HideModal();
 	data = grabSelectedData();
 	var item;
-	item = bodyPart[selectedSlot.id] = data[itemName];
-	item.itemName = itemName;
+	item = bodyPart[selectedSlot.id] = jsonCopy(data[itemName]);
 	document.getElementById(selectedSlot.id).innerHTML = '<img src="'+ item.icon + '" />'
 	item.plus = plusSlider.value;
 	populateSelectedItems();
 	CalculateData();
-	console.log(data[itemName].plus);
 }
 
 function clearMainItems() {
@@ -128,7 +126,6 @@ function ChangePlus(plus) {
 		'<img src="'+ entry.icon + '" />'+
 		'</div>' +
 		'<div class="rightdiv">'+ // RIGHT
-		'<p class="item-name">' + keyName + '<p>' +
 		fetchMiscDataByPlus(entry, plus) +
 		'</div>' +
 		'</section>'+
@@ -143,7 +140,7 @@ function populateSelectedItems() {
 	var part;
 	for (var i = 0, j=keys.length; i < j; i++) {
 		part = bodyPart[keys[i]];
-		selectedItemNames.innerHTML += '<span class="selectedItemName">' + part.itemName + " +" + part.plus + '</span><br />';
+		selectedItemNames.innerHTML += '<span class="selectedItemName">' + part.Name + " +" + part.plus + '</span><br />';
 	}
 	
 }
@@ -156,7 +153,7 @@ function CalculateData() {
 	for(key in bodyPart) {//loop through each body part
 		item = bodyPart[key];
 		for(k in item) { //loop each property
-			if (k != "plus" && k != "itemName" && k != "icon" && k != "Level"){
+			if (k != "plus" && k != "Name" && k != "icon" && k != "Level"){
 				if (obj.hasOwnProperty(k)) {
 					obj[k] += item[k][item.plus]; //if already exists, sum it
 				} else {
@@ -170,4 +167,9 @@ function CalculateData() {
 	for (key in obj) {
 		stats.innerHTML += "<span>" + key + ": " + obj[key] + "</span><br />";
 	}
+}
+
+
+function jsonCopy(src) {
+  return JSON.parse(JSON.stringify(src));
 }
