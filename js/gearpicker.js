@@ -2,10 +2,16 @@
 var selectedSlot;
 var selectedMain;
 var statusLabel;
-var weapon, head, armour, shield, bracelet, earring, necklace, belt, shoes;
+var bodyPart = {};
+var selectedItemNames, stats;
+
 function init() {
 	statusLabel = document.getElementById('status');
 	statusLabel.innerHTML = "Select your main to start";
+	selectedItemNames = document.getElementById('selectedItemNames');
+	selectedItemNames.innerHTML = "No items";
+	stats = document.getElementById('stats');
+	stats.innerHTML = "No Data";
 	initModal();
 }
 
@@ -83,38 +89,13 @@ function selectItem(itemName){
 	HideModal();
 	data = grabSelectedData();
 	var item;
-	switch(selectedSlot.id) {
-		case "Armours":
-		item = armour = data[itemName];
-		break;
-		case "Helmets":
-		item = head = data[itemName];
-		break;
-		case "Shields":
-		item = shield = data[itemName];
-		break;
-		case "Bracelets":
-		item = bracelet = data[itemName];
-		break;
-		case "Earrings":
-		item = earring = data[itemName];
-		break;
-		case "Necklaces":
-		item = necklace = data[itemName];
-		break;
-		case "Belts":
-		item = belt = data[itemName];
-		break;
-		case "Shoes":
-		item = shoes = data[itemName];
-		break;
-		case "weapon":
-		console.log("selectItem: weapons in development");
-		statusLabel.innerHTML = "selectItem: weapons in development";
-		break;
-	}
+	item = bodyPart[selectedSlot.id] = data[itemName];
+	item.itemName = itemName;
 	document.getElementById(selectedSlot.id).innerHTML = '<img src="'+ item.icon + '" />'
+	item.plus = plusSlider.value;
+	populateSelectedItems();
 	CalculateData();
+	console.log(data[itemName].plus);
 }
 
 function clearMainItems() {
@@ -150,6 +131,37 @@ function ChangePlus(plus) {
 	equipmentPiece.innerHTML = getSelectedName() + " +" + plus;
 }
 
-function CalculateData() {
+function populateSelectedItems() {
+	selectedItemNames.innerHTML = "";
+	var keys = Object.keys(bodyPart);
+	var part;
+	for (var i = 0, j=keys.length; i < j; i++) {
+		part = bodyPart[keys[i]];
+		selectedItemNames.innerHTML += '<span class="selectedItemName">' + part.itemName + " +" + part.plus + '</span><br />';
+	}
+	
+}
 
+function CalculateData() {
+	stats.innerHTML = "";
+	var obj = {};
+	var item;
+	//fetch all data
+	for(key in bodyPart) {//loop through each body part
+		item = bodyPart[key];
+		for(k in item) { //loop each property
+			if (k != "plus" && k != "itemName" && k != "icon" && k != "Level"){
+				if (obj.hasOwnProperty(k)) {
+					obj[k] += item[k][item.plus]; //if already exists, sum it
+				} else {
+					obj[k] = item[k][item.plus];//else add
+				}
+			}
+		}
+	}
+
+	//display data
+	for (key in obj) {
+		stats.innerHTML += "<span>" + key + ": " + obj[key] + "</span><br />";
+	}
 }

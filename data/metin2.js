@@ -426,7 +426,7 @@ var gamedata={
         58
       ]
     },
-    "Heaven's Tear Necklace": {
+    "Heaven Tear Necklace": {
       "Level": "54",
       "icon": "https://wiki.metin2sg.com/images/f/f9/B_Heaven%27s_Tear_Necklace.png",
       "Spell Speed": [
@@ -1792,7 +1792,7 @@ var gamedata={
         56
       ]
     },
-    "Heaven's Tear Bracelet": {
+    "Heaven Tear Bracelet": {
       "Level": "54",
       "icon": "https://wiki.metin2sg.com/images/5/55/B_Heaven%27s_Tear_Bracelet.png",
       "Attack Speed": [
@@ -2194,7 +2194,7 @@ var gamedata={
         10
       ]
     },
-    "Heaven's Tear Earrings": {
+    "Heaven Tear Earrings": {
       "Level": "54",
       "icon": "https://wiki.metin2sg.com/images/8/88/B_Heaven%27s_Tear_Earrings.png",
       "Intelligence": [
@@ -2606,7 +2606,7 @@ var gamedata={
         79
       ]
     },
-    "Cardinal's Hat": {
+    "Cardinal Hat": {
       "Level": "60",
       "icon": "https://wiki.metin2sg.com/images/1/15/B_Cardinal%27s_Hat.png",
       "Defense": [
@@ -5218,7 +5218,7 @@ var gamedata={
         20
       ]
     },
-    "Devil's Horn Armor": {
+    "Devil Horn Armor": {
       "Level": "86-100",
       "icon": "https://wiki.metin2sg.com/images/9/94/B_Devil%27s_Horn_Armor.png",
       "Defense": [

@@ -1,4 +1,5 @@
 section{
+    background-color: grey;
     margin: auto;
 }
 
@@ -180,4 +181,9 @@ section{
     min-height: 128px;
     display: flex;
     align-items: center;
+}
+
+#selectedItemNames {
+    line-height: 16px;
+    background-color: #d9d9d9;
 }
