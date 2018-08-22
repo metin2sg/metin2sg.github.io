@@ -14,6 +14,7 @@ function init() {
 	stats.innerHTML = "No Data";
 	initModal();
 
+	//mobile scaling
 	var siteWidth = 400;
 	var scale = screen.width / siteWidth;
 
