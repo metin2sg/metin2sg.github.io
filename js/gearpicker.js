@@ -13,6 +13,11 @@ function init() {
 	stats = document.getElementById('stats');
 	stats.innerHTML = "No Data";
 	initModal();
+
+	var siteWidth = 500;
+	var scale = screen.width /siteWidth
+
+	document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
 }
 
 function selectSlot(elem){
