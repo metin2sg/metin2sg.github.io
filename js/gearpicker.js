@@ -99,7 +99,6 @@ function selectItem(itemName){
 	document.getElementById(selectedSlot.id).innerHTML = '<img src="'+ item.icon + '" />'
 	item.plus = plusSlider.value;
 	populateSelectedItems();
-	CalculateData();
 }
 
 function clearMainItems() {
@@ -135,6 +134,7 @@ function ChangePlus(plus) {
 }
 
 function populateSelectedItems() {
+	CalculateData(); //always update before the new population
 	selectedItemNames.innerHTML = "";
 	var keys = Object.keys(bodyPart);
 	var part;
@@ -245,11 +245,22 @@ function CalculateData() {
 	for(key in bodyPart) {//loop through each body part
 		item = bodyPart[key];
 		for(k in item) { //loop each property
-			if (k != "plus" && k != "Name" && k != "icon" && k != "Level"){
-				if (obj.hasOwnProperty(k)) {
-					obj[k] += item[k][item.plus]; //if already exists, sum it
-				} else {
-					obj[k] = item[k][item.plus];//else add
+			if (k != "bonus"){
+				if (k != "plus" && k != "Name" && k != "icon" && k != "Level"){
+					if (obj.hasOwnProperty(k)) {
+						obj[k] += item[k][item.plus]; //if already exists, sum it
+					} else {
+						obj[k] = item[k][item.plus];//else add
+					}
+				}
+			} else {
+				var bonus = item[k];
+				for(b in bonus){
+					if (obj.hasOwnProperty(b)) {
+						obj[b] += bonus[b]; //if already exists, sum it
+					} else {
+						obj[b] = bonus[b];//else add
+					}
 				}
 			}
 		}
