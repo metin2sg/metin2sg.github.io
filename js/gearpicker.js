@@ -140,18 +140,28 @@ function populateSelectedItems() {
 	var part;
 	for (var i = 0, j=keys.length; i < j; i++) {
 		part = bodyPart[keys[i]];
-		selectedItemNames.innerHTML += 
-		'<div class="selectedItemContainer" onclick="ShowBonuses(this)">' +
-		'<span class="selectedItemName">' + part.Name + " +" + part.plus + '</span><br />' +
-		'<div class="selectedItemBonuses hidden">'+
-			DisplayBonuses(part.bonus) +
-			'<span class="addbonus" onclick="AddBonus('+keys[i]+')">Add Bonus</span>'+
-		'</div>'+
-		'</div>'
-		;
+
+		if (part.hasOwnProperty("bonus") && Object.keys(part.bonus).length < 5 || !part.hasOwnProperty("bonus")){
+			selectedItemNames.innerHTML += 
+			'<div class="selectedItemContainer" onclick="ShowBonuses(this)">' +
+			'<span class="selectedItemName">' + part.Name + " +" + part.plus + '</span><br />' +
+			'<div class="selectedItemBonuses hidden">'+
+				DisplayBonuses(part.bonus, part, keys[i]) +
+				'<span class="addbonus" onclick="AddBonus('+keys[i]+')">Add Bonus</span>'+
+			'</div></div>';
+		} else { /// LAZY WAY TO NOT ADD THE Add Bonus BUTTON
+			selectedItemNames.innerHTML += 
+			'<div class="selectedItemContainer" onclick="ShowBonuses(this)">' +
+			'<span class="selectedItemName">' + part.Name + " +" + part.plus + '</span><br />' +
+			'<div class="selectedItemBonuses hidden">'+
+				DisplayBonuses(part.bonus, part, keys[i]) +
+			'</div></div>';
+		}
 	}
 }
 
+
+/*Start Bonus*/
 function ShowBonuses(elem){
 	var child = elem.childNodes[2];
 	if (child.classList.contains("hidden"))
@@ -160,14 +170,14 @@ function ShowBonuses(elem){
 		child.classList.add("hidden");
 }
 
-function DisplayBonuses(bonus) {
+function DisplayBonuses(bonus,item, part) {
 	var data = "";
 	var keys = (bonus != undefined)?Object.keys(bonus):{};
 
 	for (var i = 0; i < keys.length; i++) {
-		data += '<span class="bonus" value"'+keys[i]+
-			'" onclick="RemoveBonus(this)">'+ keys[i] + ": " +
-			data[keys[i]] + "</span><br>";
+		data += '<span class="bonus"' +
+			' onclick="RemoveBonus(\'' + keys[i] + '\',\'' + part + '\')">'+ keys[i] + ": " +
+			bonus[keys[i]] + "</span><br>";
 	}
 
 	return data;
@@ -197,23 +207,36 @@ function AddBonus(part){
 }
 
 function SetBonus(part, index, jndex){
-	var bonus = window[part.id +"Bonus"];//part bonuses
-	var bonusName = Object.keys(adders[index]);
-	//console.log(bonusName+" _ "+adders[index][bonusName] + " _ " + jndex);
-	console.log(bodyPart[part.id]);
-	console.log(adders[index][bonusName]);
-	if (!bodyPart[part.id].hasOwnProperty(bonus))
+	if (!(bodyPart[part.id].hasOwnProperty("bonus"))){
 		bodyPart[part.id].bonus = {};
-	bodyPart[part.id].bonus[bonusName] =
-		adders[index][bonusName];
-	console.log(adders);
+	}
+
+	if (Object.keys(bodyPart[part.id].bonus).length < 5){
+		var bonus = window[part.id +"Bonus"];//part bonuses
+		var bonusValue = bonus[index];
+		var bonusName = Object.keys(adders[bonusValue]);
+		
+		bodyPart[part.id].bonus[bonusName] =
+			adders[bonusValue][bonusName][jndex];
+
+		populateSelectedItems();
+	} else {
+		statusLabel.innerHTML = "Maximum of 5 bonuses allowed.";
+	}
+	HideModal();
+	modalbody.innerHTML = "";
 }
 
-function RemoveBonus(elem){
-	console.log(elem.value);
+function RemoveBonus(bonus, part){
+	delete bodyPart[part].bonus[bonus];
+	populateSelectedItems();
 }
 
+/*End Bonus*/
 
+/*Start Rarity*/
+
+/*End Rarity*/
 function CalculateData() {
 	stats.innerHTML = "";
 	var obj = {};

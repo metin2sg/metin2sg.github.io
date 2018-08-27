@@ -223,3 +223,7 @@ section{
     float: left;
     padding-left: 10px;
 }
+
+.bonus, .addbonus {
+    padding-left: 15px;
+}
