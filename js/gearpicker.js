@@ -140,10 +140,70 @@ function populateSelectedItems() {
 	var part;
 	for (var i = 0, j=keys.length; i < j; i++) {
 		part = bodyPart[keys[i]];
-		selectedItemNames.innerHTML += '<span class="selectedItemName">' + part.Name + " +" + part.plus + '</span><br />';
+		selectedItemNames.innerHTML += 
+		'<div class="selectedItemContainer" onclick="ShowBonuses(this)">' +
+		'<span class="selectedItemName">' + part.Name + " +" + part.plus + '</span><br />' +
+		'<div class="selectedItemBonuses hidden">'+
+			DisplayBonuses(part.bonus) +
+			'<span class="addbonus" onclick="AddBonus('+keys[i]+')">Add Bonus</span>'+
+		'</div>'+
+		'</div>'
+		;
 	}
-	
 }
+
+function ShowBonuses(elem){
+	var child = elem.childNodes[2];
+	if (child.classList.contains("hidden"))
+		child.classList.remove("hidden");
+	else 
+		child.classList.add("hidden");
+}
+
+function DisplayBonuses(bonus) {
+	var data = "";
+	var keys = (bonus != undefined)?Object.keys(bonus):{};
+
+	for (var i = 0; i < keys.length; i++) {
+		data += '<span class="bonus" value"'+keys[i]+
+			'" onclick="RemoveBonus(this)">'+ keys[i] + ": " +
+			data[keys[i]] + "</span><br>";
+	}
+
+	return data;
+}
+
+function AddBonus(part){
+	ShowModal();
+	var str = "";
+
+	var bonus = window[part.id +"Bonus"];
+	var bonusData;
+	var bonusName;
+	for (var i = 0; i < bonus.length; i++) {
+		bonusData = adders[bonus[i]];
+		bonusName = Object.keys(bonusData)[0];
+		str +=
+			'<div class="itembonus">' + bonusName;
+		bonusData = bonusData[bonusName];
+		for (var j = 0; j < bonusData.length; j++) {
+			str += ' [<span class="bonuslink" onclick="SetBonus('+part.id+','+j+')">'+
+			bonusData[j]+'</span>]';
+		}
+		str +='</div>';
+	}
+	modalbody.innerHTML = str;
+	equipmentPiece.innerHTML = "Adding " + part.id + "Bonuses";
+}
+
+function SetBonus(part, index){
+	console.log(part.id + " " + index);
+}
+
+function RemoveBonus(elem){
+	console.log(elem.value);
+}
+
 
 function CalculateData() {
 	stats.innerHTML = "";
@@ -169,7 +229,50 @@ function CalculateData() {
 	}
 }
 
-
 function jsonCopy(src) {
   return JSON.parse(JSON.stringify(src));
+}
+
+function GenerateLink() {
+	var link = window.location.pathname+"?";
+	
+	link+=selectedMain+"=";
+
+	if(bodyPart) {
+		if (bodyPart.hasOwnProperty("Earrings")) {
+			link += (FindID("Earrings") + 1);
+		} else
+			link += 0;
+	}
+
+	console.log(link);
+	copyStringToClipboard(link);
+}
+
+function FindID(type){
+	var name = bodyPart["Earrings"].Name;
+	var data = gamedata[type];
+	console.log(data);
+	for (var i = 0, l = data.length; i < l; i++) {
+		if (data[i].Name == name) {
+			return i;
+		}
+	}
+}
+
+function copyStringToClipboard (str) {
+   // Create new element
+   var el = document.createElement('textarea');
+   // Set value (string to be copied)
+   el.value = str;
+   // Set non-editable to avoid focus and move outside of view
+   el.setAttribute('readonly', '');
+   el.style = {position: 'absolute', left: '-9999px'};
+   document.body.appendChild(el);
+   // Select text inside element
+   el.select();
+   // Copy text to clipboard
+   document.execCommand('copy');
+   // Remove temporary element
+   document.body.removeChild(el);
 }

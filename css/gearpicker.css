@@ -187,3 +187,39 @@ section{
     line-height: 16px;
     background-color: #d9d9d9;
 }
+
+
+/* BONUSES */
+.selectedItemContainer {
+    cursor: crosshair;
+}
+
+.hidden {
+    display: none
+}
+
+.selectedItemBonuses{
+    
+}
+
+.selectedItemBonuses .addbonus{
+    color:green;
+    cursor: pointer;
+}
+
+.bonuslink {
+    cursor: pointer;
+    color:blue;
+}
+
+.itembonus {
+    white-space: pre-line;
+    background-color: grey;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    overflow: auto;
+    border-radius: 10px;
+    width: 275px;
+    float: left;
+    padding-left: 10px;
+}
