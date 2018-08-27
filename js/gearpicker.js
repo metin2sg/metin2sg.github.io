@@ -187,17 +187,26 @@ function AddBonus(part){
 			'<div class="itembonus">' + bonusName;
 		bonusData = bonusData[bonusName];
 		for (var j = 0; j < bonusData.length; j++) {
-			str += ' [<span class="bonuslink" onclick="SetBonus('+part.id+','+j+')">'+
+			str += ' [<span class="bonuslink" onclick="SetBonus('+part.id+','+i+','+j+')">'+
 			bonusData[j]+'</span>]';
 		}
 		str +='</div>';
 	}
 	modalbody.innerHTML = str;
-	equipmentPiece.innerHTML = "Adding " + part.id + "Bonuses";
+	equipmentPiece.innerHTML = "Adding " + part.id + " Bonuses";
 }
 
-function SetBonus(part, index){
-	console.log(part.id + " " + index);
+function SetBonus(part, index, jndex){
+	var bonus = window[part.id +"Bonus"];//part bonuses
+	var bonusName = Object.keys(adders[index]);
+	//console.log(bonusName+" _ "+adders[index][bonusName] + " _ " + jndex);
+	console.log(bodyPart[part.id]);
+	console.log(adders[index][bonusName]);
+	if (!bodyPart[part.id].hasOwnProperty(bonus))
+		bodyPart[part.id].bonus = {};
+	bodyPart[part.id].bonus[bonusName] =
+		adders[index][bonusName];
+	console.log(adders);
 }
 
 function RemoveBonus(elem){
