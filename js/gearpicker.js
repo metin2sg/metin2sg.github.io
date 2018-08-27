@@ -145,6 +145,7 @@ function populateSelectedItems() {
 			'<span class="selectedItemName">' + part.Name + " +" + part.plus + '</span><br />' +
 			'<div class="selectedItemBonuses hidden">'+
 			DisplayBonuses(part.bonus, part, keys[i]);
+			DisplayRarity(part.rarity, part, keys[i]);
 		if (part.hasOwnProperty("bonus") && Object.keys(part.bonus).length < 5 || !part.hasOwnProperty("bonus")){
 			data+='<span class="addbonus" onclick="AddBonus('+keys[i]+')">Add Bonus</span><br>';
 		}
@@ -239,14 +240,14 @@ function ShowRarity(elem){
 		child.classList.add("hidden");
 }
 
-function DisplayRarity(bonus,item, part) {
+function DisplayRarity(rarity,item, part) {
 	var data = "";
-	var keys = (bonus != undefined)?Object.keys(bonus):{};
+	var keys = (rarity != undefined)?Object.keys(rarity):{};
 
 	for (var i = 0; i < keys.length; i++) {
-		data += '<span class="bonus"' +
-			' onclick="RemoveBonus(\'' + keys[i] + '\',\'' + part + '\')">'+ keys[i] + ": " +
-			bonus[keys[i]] + "</span><br>";
+		data += '<span class="rarity"' +
+			' onclick="RemoveRarity(\'' + keys[i] + '\',\'' + part + '\')">'+ keys[i] + ": " +
+			rarity[keys[i]] + "</span><br>";
 	}
 
 	return data;
@@ -256,48 +257,48 @@ function AddRarity(part){
 	ShowModal();
 	var str = "";
 
-	var bonus = window[part.id +"Bonus"];
-	var bonusData;
-	var bonusName;
-	for (var i = 0; i < bonus.length; i++) {
-		bonusData = adders[bonus[i]];
-		bonusName = Object.keys(bonusData)[0];
+	var rarity = window[part.id +"Rarity"];
+	var rarityData;
+	var rarityName;
+	for (var i = 0; i < rarity.length; i++) {
+		rarityData = adders[rarity[i]];
+		rarityName = Object.keys(rarityData)[0];
 		str +=
-			'<div class="itembonus">' + bonusName;
-		bonusData = bonusData[bonusName];
-		for (var j = 0; j < bonusData.length; j++) {
-			str += ' [<span class="bonuslink" onclick="SetBonus('+part.id+','+i+','+j+')">'+
-			bonusData[j]+'</span>]';
+			'<div class="itemrarity">' + rarityName;
+		rarityData = rarityData[rarityName];
+		for (var j = 0; j < rarityData.length; j++) {
+			str += ' [<span class="raritylink" onclick="SetRarity('+part.id+','+i+','+j+')">'+
+			rarityData[j]+'</span>]';
 		}
 		str +='</div>';
 	}
 	modalbody.innerHTML = str;
-	equipmentPiece.innerHTML = "Adding " + part.id + " Bonuses";
+	equipmentPiece.innerHTML = "Adding " + part.id + " Rarities";
 }
 
 function SetRarity(part, index, jndex){
-	if (!(bodyPart[part.id].hasOwnProperty("bonus"))){
-		bodyPart[part.id].bonus = {};
+	if (!(bodyPart[part.id].hasOwnProperty("rarity"))){
+		bodyPart[part.id].rarity = {};
 	}
 
-	if (Object.keys(bodyPart[part.id].bonus).length < 2){
-		var bonus = window[part.id +"Bonus"];//part bonuses
-		var bonusValue = bonus[index];
-		var bonusName = Object.keys(adders[bonusValue]);
+	if (Object.keys(bodyPart[part.id].rarity).length < 2){
+		var rarity = window[part.id +"Rarity"];//part rarities
+		var rarityValue = rarity[index];
+		var rarityName = Object.keys(adders[rarityValue]);
 		
-		bodyPart[part.id].bonus[bonusName] =
-			adders[bonusValue][bonusName][jndex];
+		bodyPart[part.id].rarity[rarityName] =
+			adders[rarityValue][rarityName][jndex];
 
 		populateSelectedItems();
 	} else {
-		statusLabel.innerHTML = "Maximum of 2 bonuses allowed.";
+		statusLabel.innerHTML = "Maximum of 2 rarities allowed.";
 	}
 	HideModal();
 	modalbody.innerHTML = "";
 }
 
-function RemoveRarity(bonus, part){
-	delete bodyPart[part].bonus[bonus];
+function RemoveRarity(rarity, part){
+	delete bodyPart[part].rarity[rarity];
 	populateSelectedItems();
 }
 /*End Rarity*/
@@ -309,23 +310,35 @@ function CalculateData() {
 	for(key in bodyPart) {//loop through each body part
 		item = bodyPart[key];
 		for(k in item) { //loop each property
-			if (k != "bonus"){
-				if (k != "plus" && k != "Name" && k != "icon" && k != "Level"){
+			switch (k)  {
+				case "bonus":
+					var bonus = item[k];
+					for(b in bonus){
+						if (obj.hasOwnProperty(b)) {
+							obj[b] += bonus[b]; //if already exists, sum it
+						} else {
+							obj[b] = bonus[b];//else add
+						}
+					}
+					break;
+				case "rarity":
+					var rarity = item[k];
+					for(b in rarity){
+						if (obj.hasOwnProperty(b)) {
+							obj[b] += rarity[b]; //if already exists, sum it
+						} else {
+							obj[b] = rarity[b];//else add
+						}
+					}
+					break;
+				case "plus":case "Name":case "icon":case "Level":
+					break;
+				default:
 					if (obj.hasOwnProperty(k)) {
 						obj[k] += item[k][item.plus]; //if already exists, sum it
 					} else {
 						obj[k] = item[k][item.plus];//else add
 					}
-				}
-			} else {
-				var bonus = item[k];
-				for(b in bonus){
-					if (obj.hasOwnProperty(b)) {
-						obj[b] += bonus[b]; //if already exists, sum it
-					} else {
-						obj[b] = bonus[b];//else add
-					}
-				}
 			}
 		}
 	}

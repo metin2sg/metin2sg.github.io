@@ -232,3 +232,7 @@ section{
 .bonus, .addbonus, .addrarity {
     padding-left: 15px;
 }
+
+.bonus{
+    color:#008080;
+}
