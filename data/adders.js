@@ -54,12 +54,24 @@ var adders=[{"Resistance to Warrior Attack":[5,6,10,15]},
 
 ]
 
-var ArmoursBonus = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,19,20,21];
-var HelmetsBonus = [11,12,13,14,16,22,23,24,25,26,27,28,29,30,31,43,44,46,47,48];
-var ShieldsBonus = [26,27,28,29,30,31,32,33,34,35,40,41,50,51,52,53];
-var BraceletsBonus = [10,11,12,13,25,26,27,28,29,30,67,14,15,16,17];
+var ArmoursBonus = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,19,20];
+var HelmetsBonus = [10,11,12,13,42,21,22,23,24,25,26,27,28,29,30,45,46,15,43,47];
+var ShieldsBonus = [25,26,27,28,29,30,31,32,33,34,39,41,49,50,51,52];
+var BraceletsBonus = [10,11,12,13,25,26,27,28,29,30,36,40,14,15,16,17];
 var EarringsBonus = [4,5,6,7,8,9,25,26,27,28,29,30,44,48,15,40];
-var NecklacesBonus = [0,1,2,3,4,5,6,7,8,9,35,36,45,46,39,41,14,15,16,17,38];
-var weaponBonus = [21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,47,20];
+var NecklacesBonus = [0,1,2,3,4,5,6,7,8,9,35,36,45,46,39,41,15,16,17,38];
+var weaponBonus = [21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,47,20]; //NEED TO CONFIRM VALUES
 var BeltsBonus = [];
-var ShoesBonus = [4,5,6,7,8,9,21,22,23,24,35,39,40,41,42,16,17,37,38,43];
+var ShoesBonus = [4,5,6,7,8,9,21,22,23,24,35,39,41,42,16,17,37,38,43];
+
+var rarities = [];
+
+var ArmoursRarity = [];
+var HelmetsRarity = [];
+var ShieldsRarity = [];
+var BraceletsRarity = [];
+var EarringsRarity = [];
+var NecklacesRarity = [];
+var weaponRarity = [];
+var BeltsRarity = [];
+var ShoesRarity = [];

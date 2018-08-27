@@ -189,6 +189,7 @@ function AddBonus(part){
 	var bonusName;
 	for (var i = 0; i < bonus.length; i++) {
 		bonusData = adders[bonus[i]];
+		console.log(bonusData);
 		bonusName = Object.keys(bonusData)[0];
 		str +=
 			'<div class="itembonus">' + bonusName;
@@ -284,10 +285,10 @@ function SetRarity(part, index, jndex){
 	if (Object.keys(bodyPart[part.id].rarity).length < 2){
 		var rarity = window[part.id +"Rarity"];//part rarities
 		var rarityValue = rarity[index];
-		var rarityName = Object.keys(adders[rarityValue]);
+		var rarityName = Object.keys(rarities[rarityValue]);
 		
 		bodyPart[part.id].rarity[rarityName] =
-			adders[rarityValue][rarityName][jndex];
+			rarities[rarityValue][rarityName][jndex];
 
 		populateSelectedItems();
 	} else {
