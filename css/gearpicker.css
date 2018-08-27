@@ -207,6 +207,11 @@ section{
     cursor: pointer;
 }
 
+.selectedItemBonuses .addrarity{
+    color:red;
+    cursor: pointer;
+}
+
 .bonuslink {
     cursor: pointer;
     color:blue;
@@ -224,6 +229,6 @@ section{
     padding-left: 10px;
 }
 
-.bonus, .addbonus {
+.bonus, .addbonus, .addrarity {
     padding-left: 15px;
 }
