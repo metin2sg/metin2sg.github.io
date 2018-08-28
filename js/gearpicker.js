@@ -131,6 +131,8 @@ function ChangePlus(plus) {
 		'</div>';
 	}
 	equipmentPiece.innerHTML = getSelectedName() + " +" + plus;
+	if (plusSlider.classList.contains("hidden"))
+		plusSlider.classList.remove("hidden");
 }
 
 function populateSelectedItems() {
@@ -141,10 +143,10 @@ function populateSelectedItems() {
 	for (var i = 0, j=keys.length; i < j; i++) {
 		part = bodyPart[keys[i]];
 
-		data += '<div class="selectedItemContainer" onclick="ShowBonuses(this)">' +
-			'<span class="selectedItemName">' + part.Name + " +" + part.plus + '</span><br />' +
+		data += '<div class="selectedItemContainer">' +
+			'<span class="selectedItemName" onclick="ShowBonuses(this)">' + part.Name + " +" + part.plus + '</span><br />' +
 			'<div class="selectedItemBonuses hidden">'+
-			DisplayBonuses(part.bonus, part, keys[i]);
+			DisplayBonuses(part.bonus, part, keys[i]) +
 			DisplayRarity(part.rarity, part, keys[i]);
 		if (part.hasOwnProperty("bonus") && Object.keys(part.bonus).length < 5 || !part.hasOwnProperty("bonus")){
 			data+='<span class="addbonus" onclick="AddBonus('+keys[i]+')">Add Bonus</span><br>';
@@ -160,7 +162,7 @@ function populateSelectedItems() {
 
 /*Start Bonus*/
 function ShowBonuses(elem){
-	var child = elem.childNodes[2];
+	var child = elem.parentElement.childNodes[2];
 	if (child.classList.contains("hidden"))
 		child.classList.remove("hidden");
 	else 
@@ -189,7 +191,6 @@ function AddBonus(part){
 	var bonusName;
 	for (var i = 0; i < bonus.length; i++) {
 		bonusData = adders[bonus[i]];
-		console.log(bonusData);
 		bonusName = Object.keys(bonusData)[0];
 		str +=
 			'<div class="itembonus">' + bonusName;
@@ -201,6 +202,7 @@ function AddBonus(part){
 		str +='</div>';
 	}
 	modalbody.innerHTML = str;
+	plusSlider.classList.add("hidden");
 	equipmentPiece.innerHTML = "Adding " + part.id + " Bonuses";
 }
 
@@ -233,14 +235,6 @@ function RemoveBonus(bonus, part){
 /*End Bonus*/
 
 /*Start Rarity*/
-function ShowRarity(elem){
-	var child = elem.childNodes[2];
-	if (child.classList.contains("hidden"))
-		child.classList.remove("hidden");
-	else 
-		child.classList.add("hidden");
-}
-
 function DisplayRarity(rarity,item, part) {
 	var data = "";
 	var keys = (rarity != undefined)?Object.keys(rarity):{};
@@ -262,18 +256,19 @@ function AddRarity(part){
 	var rarityData;
 	var rarityName;
 	for (var i = 0; i < rarity.length; i++) {
-		rarityData = adders[rarity[i]];
+		rarityData = rarities[rarity[i]];
 		rarityName = Object.keys(rarityData)[0];
 		str +=
-			'<div class="itemrarity">' + rarityName;
+			'<div class="itembonus">' + rarityName;
 		rarityData = rarityData[rarityName];
 		for (var j = 0; j < rarityData.length; j++) {
-			str += ' [<span class="raritylink" onclick="SetRarity('+part.id+','+i+','+j+')">'+
+			str += ' [<span class="bonuslink" onclick="SetRarity('+part.id+','+i+','+j+')">'+
 			rarityData[j]+'</span>]';
 		}
 		str +='</div>';
 	}
 	modalbody.innerHTML = str;
+	plusSlider.classList.add("hidden");
 	equipmentPiece.innerHTML = "Adding " + part.id + " Rarities";
 }
 

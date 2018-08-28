@@ -187,11 +187,14 @@ section{
     line-height: 16px;
     background-color: #d9d9d9;
 }
+.selectedItemName{
+    cursor: pointer;
+}
 
 
 /* BONUSES */
 .selectedItemContainer {
-    cursor: crosshair;
+    
 }
 
 .hidden {
@@ -229,10 +232,14 @@ section{
     padding-left: 10px;
 }
 
-.bonus, .addbonus, .addrarity {
+.bonus,.rarity, .addbonus, .addrarity {
     padding-left: 15px;
 }
 
-.bonus{
+.bonus {
     color:#008080;
+}
+
+.rarity {
+    color:#770071;
 }
