@@ -19,6 +19,8 @@ function init() {
 	var scale = screen.width / siteWidth;
 
 	document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
+
+	LoadQueryString();
 }
 
 function selectSlot(elem){
@@ -349,31 +351,42 @@ function jsonCopy(src) {
   return JSON.parse(JSON.stringify(src));
 }
 
+var linkSequencer = ["Armours","Helmets","Shields","Bracelets",
+"Earrings","Necklaces","weapon","Belts", "Shoes"];
+
 function GenerateLink() {
 	var link = window.location.pathname+"?";
-	
+
 	link+=selectedMain+"=";
+	var part;
+	for (var i = 0; i < linkSequencer.length; i++) {
+		part = linkSequencer[i];
+		link += (FindID(part) + 1);
 
-	if(bodyPart) {
-		if (bodyPart.hasOwnProperty("Earrings")) {
-			link += (FindID("Earrings") + 1);
-		} else
-			link += 0;
+		link += "_";
 	}
-
+	
+	link = link.slice(0, -1);
 	console.log(link);
 	copyStringToClipboard(link);
 }
 
 function FindID(type){
-	var name = bodyPart["Earrings"].Name;
-	var data = gamedata[type];
-	console.log(data);
-	for (var i = 0, l = data.length; i < l; i++) {
-		if (data[i].Name == name) {
-			return i;
+	if (bodyPart.hasOwnProperty(type)) {
+		var name = bodyPart[type].Name;
+		if (type == "Armours" || type == "Helmets"){
+			type = selectedMain + " " + type;
 		}
+		var data = gamedata[type];
+		for (var i = 0, l = data.length; i < l; i++) {
+			if (data[i].Name == name) {
+				return i;
+			}
+		}
+	} else {
+		return -1;
 	}
+	
 }
 
 function copyStringToClipboard (str) {
@@ -391,4 +404,21 @@ function copyStringToClipboard (str) {
    document.execCommand('copy');
    // Remove temporary element
    document.body.removeChild(el);
+}
+
+function LoadQueryString() {
+	//decode string
+    var match,
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query  = window.location.search.substring(1);
+
+    var urlParams = {};
+    while (match = search.exec(query))
+       urlParams[decode(match[1])] = decode(match[2]);
+   //deal with the data
+   document.getElementById(Object.keys(urlParams)[0]+"Radio").click();
+   var arr = urlParams[Object.keys(urlParams)[0]].split('_');
+   console.log(arr);
 }
