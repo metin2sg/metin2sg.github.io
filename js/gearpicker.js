@@ -14,13 +14,17 @@ function init() {
 	stats.innerHTML = "No Data";
 	initModal();
 
+	MobileScaling();
+
+	LoadQueryString();
+}
+
+function MobileScaling() {
 	//mobile scaling
 	var siteWidth = 400;
 	var scale = screen.width / siteWidth;
 
 	document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
-
-	LoadQueryString();
 }
 
 function selectSlot(elem){
@@ -347,30 +351,6 @@ function CalculateData() {
 	}
 }
 
-function jsonCopy(src) {
-  return JSON.parse(JSON.stringify(src));
-}
-
-var linkSequencer = ["Armours","Helmets","Shields","Bracelets",
-"Earrings","Necklaces","weapon","Belts", "Shoes"];
-
-function GenerateLink() {
-	var link = window.location.pathname+"?";
-
-	link+=selectedMain+"=";
-	var part;
-	for (var i = 0; i < linkSequencer.length; i++) {
-		part = linkSequencer[i];
-		link += (FindID(part) + 1);
-
-		link += "_";
-	}
-	
-	link = link.slice(0, -1);
-	console.log(link);
-	copyStringToClipboard(link);
-}
-
 function FindID(type){
 	if (bodyPart.hasOwnProperty(type)) {
 		var name = bodyPart[type].Name;
@@ -386,7 +366,10 @@ function FindID(type){
 	} else {
 		return -1;
 	}
-	
+}
+
+function jsonCopy(src) {
+  return JSON.parse(JSON.stringify(src));
 }
 
 function copyStringToClipboard (str) {
@@ -406,6 +389,65 @@ function copyStringToClipboard (str) {
    document.body.removeChild(el);
 }
 
+var linkSequencer = ["Armours","Helmets","Shields","Bracelets",
+"Earrings","Necklaces","weapon","Belts", "Shoes"];
+
+function GenerateLink() {
+	var link = window.location.pathname+"?";
+
+	link+=selectedMain+"=";
+	var part;
+	var item;
+	var itemID;
+	for (var i = 0; i < linkSequencer.length; i++) {
+		part = linkSequencer[i];
+		itemID = (FindID(part) + 1);
+		link += itemID;
+
+		if (itemID > 0) {
+			item = bodyPart[part];
+			//plus
+			link += "," + item.plus;
+			//bonuses
+			link += "," + FectchBonusQS(item, "bonus", adders);
+			//rarities
+			link += "," + FectchBonusQS(item, "rarity", rarities);
+		}
+		link += "_";
+	}
+	
+	link = link.slice(0, -1);
+	console.log(link);
+	copyStringToClipboard(link);
+}
+
+function FectchBonusQS(item, target, targetVar) {
+	if (item.hasOwnProperty(target)){
+		var keys = Object.keys(item[target]);
+		var link = "";
+		var helper;
+		for(key in keys) {
+			key = keys[key];
+			for (var i = 0, l = targetVar.length; i < l; i++) {
+				helper = targetVar[i];
+				if (Object.keys(helper)[0] == key) {
+					link += i + "-";
+					helper = helper[key];
+					for (var j = 0; j < helper.length; j++) {
+						if (item[target][key] == helper[j]) {
+							link += j + ";";
+						}
+					}
+				}
+			}
+		}
+		link = link.slice(0, -1);
+	} else {
+		link = 0;
+	}
+	return link;
+}
+
 function LoadQueryString() {
 	//decode string
     var match,
@@ -418,7 +460,56 @@ function LoadQueryString() {
     while (match = search.exec(query))
        urlParams[decode(match[1])] = decode(match[2]);
    //deal with the data
+   //first, select the main class
+   if (Object.keys(urlParams).length == 0) {
+   		return;
+   }
    document.getElementById(Object.keys(urlParams)[0]+"Radio").click();
+   //split the data on a body part basis "_" delimits each part
    var arr = urlParams[Object.keys(urlParams)[0]].split('_');
-   console.log(arr);
+
+   //loop through each part
+   var type;
+   var itemID;
+   var partData;
+   for (var i = 0; i < linkSequencer.length; i++) {
+   		type = linkSequencer[i];
+   		if (type == "Armours" || type == "Helmets"){
+			type = selectedMain + " " + type;
+		}
+		partData = arr[i];
+		if (partData != 0) {
+			partData = partData.split(','); //split the part data
+			itemID = partData[0] - 1; //fetch the ID
+			bodyPart[linkSequencer[i]] = gamedata[type][itemID]; //grab the item
+			var item;
+			item = bodyPart[linkSequencer[i]] = jsonCopy(gamedata[type][itemID]); //deep copy
+			//display item image
+			document.getElementById(linkSequencer[i]).innerHTML = '<img src="'+ item.icon + '" />';
+			item.plus = partData[1]; //fetch the plus
+			//deal with bonuses
+			ObtainBonusQS(item, partData[2], "bonus", adders);
+			//deal with  rarity
+			ObtainBonusQS(item, partData[3], "rarity", rarities);
+			populateSelectedItems();
+		}
+   }
+}
+
+function ObtainBonusQS(item, data, target, targetVar) {
+	if (data != 0) {
+		var d = data.split(";");
+		var b;
+		var key;
+		item[target] = {};
+		for (var i = 0; i < d.length; i++) {
+			b = d[i].split("-");
+			key = Object.keys(targetVar[b[0]])[0];
+			for (var j = 0; j < targetVar.length; j++) {
+				if (Object.keys(targetVar[j])[0] == key) {
+					item[target][key] = targetVar[j][key][b[1]];
+				}
+			}
+		}
+	}
 }

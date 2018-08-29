@@ -3,69 +3,10 @@
 
 <head>
 	<meta name="viewport" content="width=400, initial-scale=1">
-
-	<link rel="stylesheet" href="css/slider.css">
- 	<link rel="stylesheet" href="css/gearpicker.css">
- 	<script src="js/gearpicker.js"></script>
- 	<link rel="stylesheet" href="css/modalpopup.css">
- 	<script src="js/modalpopup.js"></script>
- 	<script src="data/metin2.js"></script>
- 	<script src="data/adders.js"></script>
 </head>
-
-<body onload="init()">
-
-	<a href="https://www.metin2sg.com">Visit www.metin2sg.com to play the game</a>
-<!-- Selected Equipment -->
-	<div id="status"><label>Select your Main</label></div>
-	<section class="baseDisplay">
-	<div class="leftdiv">
-		<div class="container">
-		    <div class="bg-image"></div>
-		    <div id="weapon" class="highlight-region" onclick="selectSlot(this)"></div>
-		    <div id="Helmets" class="highlight-region" onclick="selectSlot(this)"></div>
-		    <div id="Shields" class="highlight-region" onclick="selectSlot(this)"></div>
-		    <div id="Bracelets" class="highlight-region" onclick="selectSlot(this)"></div>
-		    <div id="Earrings" class="highlight-region" onclick="selectSlot(this)"></div>
-		    <div id="Necklaces" class="highlight-region" onclick="selectSlot(this)"></div>
-		    <div id="Armours" class="highlight-region" onclick="selectSlot(this)"></div>
-		    <div id="Belts" class="highlight-region" onclick="selectSlot(this)"></div>
-		    <div id="Shoes" class="highlight-region" onclick="selectSlot(this)"></div>
-		</div>
-	</div>
-<!-- Selected Main -->
-	<div class="rightdiv">
-		<p>Select your Main:</p>
-		<input id="WarriorRadio" type="radio" name="main" value="Warrior" onclick="selectMain(this)">Warrior<br />
-		<input id="AssassinRadio" type="radio" name="main" value="Assassin" onclick="selectMain(this)">Assassin<br />
-		<input id="SuraRadio" type="radio" name="main" value="Sura" onclick="selectMain(this)">Sura<br />
-		<input id="MageRadio" type="radio" name="main" value="Mage" onclick="selectMain(this)">Mage<br />
-	</div>
-	</section>
+<body onload="MobileScaling()">
+	<a href="https://www.metin2sg.com">Visit www.metin2sg.com to play the oficial game</a>
+	<br>
+	<a href="gear-manager/index.htm">Gear Manager</a>
 	
-	<div id="selectedItemNames"></div>
-	<div id="stats"></div>
-
-
-	<!-- Modal -->
-	<div id="myModal" class="modal">
-		<section class="modal-header">
-			<div id="equipmentPiece" class="leftdiv"></div>
-	    	<div class="slidecontainer rightdiv">
-  				<input type="range" min="0" max="9" value="0" class="slider" id="plusSlider" oninput="ChangePlus(value)">
-	    	</div>
-	    </section>
-	  <!-- Modal content -->
-	  <div class="modal-content">
-	    <span class="close">&times;</span>
-	    <div id="modal-body" style="width:100%;overflow: hidden;"></div>
-	  </div>
-
-	</div>
-
-	<input type="button" id="getLink" value="Get Shareable Link" onclick="GenerateLink()">
-
-
-
 </body>
-</html>
