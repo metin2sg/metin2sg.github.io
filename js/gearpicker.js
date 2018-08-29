@@ -393,7 +393,7 @@ var linkSequencer = ["Armours","Helmets","Shields","Bracelets",
 "Earrings","Necklaces","weapon","Belts", "Shoes"];
 
 function GenerateLink() {
-	var link = window.location.pathname+"?";
+	var link = window.location.href.split('?')[0]+"?";
 
 	link+=selectedMain+"=";
 	var part;
@@ -417,7 +417,6 @@ function GenerateLink() {
 	}
 	
 	link = link.slice(0, -1);
-	console.log(link);
 	copyStringToClipboard(link);
 }
 
