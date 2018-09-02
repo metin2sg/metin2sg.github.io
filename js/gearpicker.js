@@ -151,7 +151,7 @@ function populateSelectedItems() {
 
 		data += '<div class="selectedItemContainer">' +
 			'<span class="selectedItemName" onclick="ShowBonuses(this)">' + part.Name + " +" + part.plus + '</span><br />' +
-			'<div class="selectedItemBonuses hidden">'+
+			'<div class="selectedItemBonuses">'+
 			DisplayBonuses(part.bonus, part, keys[i]) +
 			DisplayRarity(part.rarity, part, keys[i]);
 		if (part.hasOwnProperty("bonus") && Object.keys(part.bonus).length < 5 || !part.hasOwnProperty("bonus")){
@@ -168,11 +168,11 @@ function populateSelectedItems() {
 
 /*Start Bonus*/
 function ShowBonuses(elem){
-	var child = elem.parentElement.childNodes[2];
+	/*var child = elem.parentElement.childNodes[2];
 	if (child.classList.contains("hidden"))
 		child.classList.remove("hidden");
 	else 
-		child.classList.add("hidden");
+		child.classList.add("hidden");*/
 }
 
 function DisplayBonuses(bonus,item, part) {

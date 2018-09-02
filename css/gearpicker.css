@@ -189,12 +189,13 @@ section{
 }
 .selectedItemName{
     cursor: pointer;
+    font-size: 14px;
 }
 
 
 /* BONUSES */
 .selectedItemContainer {
-    
+    font-size: 12px;
 }
 
 .hidden {
@@ -242,4 +243,8 @@ section{
 
 .rarity {
     color:#770071;
+}
+
+#stats {
+    font-size: 12px;
 }
