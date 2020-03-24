@@ -4,13 +4,23 @@
 <head>
 	<meta name="viewport" content="width=400, initial-scale=1">
 
+	<!--imports-->
+	<!--css-->
 	<link rel="stylesheet" href="../css/slider.css">
- 	<link rel="stylesheet" href="../css/gearpicker.css">
- 	<script src="../js/gearpicker.js"></script>
- 	<link rel="stylesheet" href="../css/modalpopup.css">
- 	<script src="../js/modalpopup.js"></script>
- 	<script src="../data/metin2.js"></script>
- 	<script src="../data/adders.js"></script>
+	<link rel="stylesheet" href="../css/gearpicker.css">
+	<link rel="stylesheet" href="../css/modalpopup.css">
+
+	<!--react.js-->
+	<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+	<!--data-->
+	<script src="../data/metin2.js"></script>
+	<script src="../data/adders.js"></script>
+	<!--components-->
+	<script src="../js/modalpopup.js"></script>
+	<!--code-->
+	<script src="../js/gearpicker.js"></script>
+	
 </head>
 
 <body onload="init()">
@@ -18,33 +28,43 @@
 	<a href="https://www.metin2sg.com">Visit www.metin2sg.com to play the game</a>
 <!-- Selected Equipment -->
 	<div id="status"><label>Select your Main</label></div>
-	<section class="baseDisplay">
-	<div class="leftdiv">
-		<div class="container">
-		    <div class="bg-image"></div>
-		    <div id="weapon" class="highlight-region" onclick="selectSlot(this)"></div>
-		    <div id="Helmets" class="highlight-region" onclick="selectSlot(this)"></div>
-		    <div id="Shields" class="highlight-region" onclick="selectSlot(this)"></div>
-		    <div id="Bracelets" class="highlight-region" onclick="selectSlot(this)"></div>
-		    <div id="Earrings" class="highlight-region" onclick="selectSlot(this)"></div>
-		    <div id="Necklaces" class="highlight-region" onclick="selectSlot(this)"></div>
-		    <div id="Armours" class="highlight-region" onclick="selectSlot(this)"></div>
-		    <div id="Belts" class="highlight-region" onclick="selectSlot(this)"></div>
-		    <div id="Shoes" class="highlight-region" onclick="selectSlot(this)"></div>
+	<div class="flex-grid-thirds">
+		<div class="col">
+				<div class="leftdiv">
+					<div class="container">
+						<div class="bg-image"></div>
+						<div id="weapon" class="highlight-region" onclick="selectSlot(this)"></div>
+						<div id="Helmets" class="highlight-region" onclick="selectSlot(this)"></div>
+						<div id="Shields" class="highlight-region" onclick="selectSlot(this)"></div>
+						<div id="Bracelets" class="highlight-region" onclick="selectSlot(this)"></div>
+						<div id="Earrings" class="highlight-region" onclick="selectSlot(this)"></div>
+						<div id="Necklaces" class="highlight-region" onclick="selectSlot(this)"></div>
+						<div id="Armours" class="highlight-region" onclick="selectSlot(this)"></div>
+						<div id="Belts" class="highlight-region" onclick="selectSlot(this)"></div>
+						<div id="Shoes" class="highlight-region" onclick="selectSlot(this)"></div>
+					</div>
+				</div>
+				<div class="rightdiv">
+					<p>Select your Main:</p>
+					<input id="WarriorRadio" type="radio" name="main" value="Warrior" onclick="selectMain(this)">Warrior<br />
+					<input id="AssassinRadio" type="radio" name="main" value="Assassin" onclick="selectMain(this)">Assassin<br />
+					<input id="SuraRadio" type="radio" name="main" value="Sura" onclick="selectMain(this)">Sura<br />
+					<input id="MageRadio" type="radio" name="main" value="Mage" onclick="selectMain(this)">Mage<br />
+				</div>
 		</div>
-	</div>
-<!-- Selected Main -->
-	<div class="rightdiv">
-		<p>Select your Main:</p>
-		<input id="WarriorRadio" type="radio" name="main" value="Warrior" onclick="selectMain(this)">Warrior<br />
-		<input id="AssassinRadio" type="radio" name="main" value="Assassin" onclick="selectMain(this)">Assassin<br />
-		<input id="SuraRadio" type="radio" name="main" value="Sura" onclick="selectMain(this)">Sura<br />
-		<input id="MageRadio" type="radio" name="main" value="Mage" onclick="selectMain(this)">Mage<br />
-	</div>
-	</section>
+		<div class="col">
+			<div id="selectedItemNames"></div>
+		</div>
+		<div class="col">
+			<div id="stats"></div>
+		</div>
+	  </div>
 	
-	<div id="selectedItemNames"></div>
-	<div id="stats"></div>
+<!-- Selected Main -->
+	
+	
+	
+	
 
 
 	<!-- Modal -->

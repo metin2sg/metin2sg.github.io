@@ -1,21 +1,32 @@
-section{
+/* 3 column */
+
+.flex-grid-thirds {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex-grid-thirds .col {
+    width: 32%;
+  }
+
+/* section{
     background-color: grey;
     margin: auto;
-}
+} */
 
-.baseDisplay{
+/* .baseDisplay{
     height:200px;
-}
+} */
 
 .leftdiv {
     width: 165px;
     float: left;
+    /* margin-top: -12px; */
 }
 
 .rightdiv{
     padding-left: 5px;
 }
-
+/* Gear Display */
 .container {
     position:relative;
     height:188px;
@@ -185,7 +196,7 @@ section{
 
 #selectedItemNames {
     line-height: 16px;
-    background-color: #d9d9d9;
+    /* background-color: #d9d9d9; */
 }
 .selectedItemName{
     cursor: pointer;
@@ -206,22 +217,22 @@ section{
     
 }
 
-.selectedItemBonuses .addbonus{
+.selectedItemBonuses .addBonus{
     color:green;
     cursor: pointer;
 }
 
-.selectedItemBonuses .addrarity{
+.selectedItemBonuses .addRarity{
     color:red;
     cursor: pointer;
 }
 
-.bonuslink {
+.bonusLink {
     cursor: pointer;
     color:blue;
 }
 
-.itembonus {
+.itemBonus {
     white-space: pre-line;
     background-color: grey;
     margin-bottom: 5px;
@@ -233,7 +244,7 @@ section{
     padding-left: 10px;
 }
 
-.bonus,.rarity, .addbonus, .addrarity {
+.bonus,.rarity, .addBonus, .addRarity {
     padding-left: 15px;
 }
 

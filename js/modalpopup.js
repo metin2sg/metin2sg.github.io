@@ -1,12 +1,12 @@
 var modal;
-var modalbody;
+var modalBody;
 var span;
 var equipmentPiece;
 var plusSlider;
 function initModal() {
     // Get the modal
     modal = document.getElementById('myModal');
-    modalbody = document.getElementById('modal-body');
+    modalBody = document.getElementById('modal-body');
 
     // Get the <span> element that closes the modal
     span = document.getElementsByClassName("close")[0];

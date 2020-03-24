@@ -13,9 +13,7 @@ function init() {
 	stats = document.getElementById('stats');
 	stats.innerHTML = "No Data";
 	initModal();
-
 	MobileScaling();
-
 	LoadQueryString();
 }
 
@@ -24,13 +22,13 @@ function MobileScaling() {
 	var siteWidth = 400;
 	var scale = screen.width / siteWidth;
 
-	document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
+	document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=' + siteWidth + ', initial-scale=' + scale + '');
 }
 
-function selectSlot(elem){
+function selectSlot(elem) {
 	if (selectedMain) {
 		statusLabel.innerHTML = "Selected: " + elem.id;
-		if (selectedSlot){
+		if (selectedSlot) {
 			selectedSlot.classList.remove('selected');
 		}
 		elem.classList.add('selected');
@@ -38,7 +36,7 @@ function selectSlot(elem){
 		ShowModal();
 		DisplayItems();
 	} else {
-		statusLabel.innerHTML ="Please select your main";
+		statusLabel.innerHTML = "Please select your main";
 	}
 }
 
@@ -53,26 +51,26 @@ function DisplayItems() {
 	ChangePlus(plusSlider.value);
 }
 
-function fetchMiscData(data){
-	var text ="";
+function fetchMiscData(data) {
+	var text = "";
 	var keys = Object.keys(data);
-	for (var i = 0,l=keys.length; i < l; i++) {
-		if (keys[i] != "icon") {
+	for (var i = 0, l = keys.length; i < l; i++) {
+		if (keys[i] !== "icon") {
 			text += '<p class="item-data">' + keys[i] + ": " + data[keys[i]] + '<p>';
 		}
 	}
 	return text;
 }
 
-function fetchMiscDataByPlus(data, plus){
-	var text ="";
+function fetchMiscDataByPlus(data, plus) {
+	var text = "";
 	var keys = Object.keys(data);
 	var keyName;
-	for (var i = 0,l=keys.length; i < l; i++) {
+	for (var i = 0, l = keys.length; i < l; i++) {
 		keyName = keys[i];
-		if (keyName != "icon") {
-			if (keyName == "Level" || keyName == "Name") {
-				text += '<p class="item-data">' + keyName + ": " + data[keys[i]] + '<p>';	
+		if (keyName !== "icon") {
+			if (keyName === "Level" || keyName === "Name") {
+				text += '<p class="item-data">' + keyName + ": " + data[keys[i]] + '<p>';
 			} else {
 				text += '<p class="item-data">' + keyName + ": " + data[keys[i]][plus] + '<p>';
 			}
@@ -82,9 +80,9 @@ function fetchMiscDataByPlus(data, plus){
 }
 
 function getSelectedName() {
-	if (selectedSlot.id == "Helmets" || selectedSlot.id == "Armours"){
-		return  selectedMain + " " + selectedSlot.id;
-	} else if (selectedSlot.id == "weapon") {
+	if (selectedSlot.id === "Helmets" || selectedSlot.id === "Armours") {
+		return selectedMain + " " + selectedSlot.id;
+	} else if (selectedSlot.id === "weapon") {
 		console.log("grabSelectedData: weapons in development");
 		statusLabel.innerHTML = "grabSelectedData: weapons in development";
 	} else {
@@ -93,16 +91,16 @@ function getSelectedName() {
 }
 
 function grabSelectedData() {
-	return  gamedata[getSelectedName()];
+	return gameData[getSelectedName()];
 }
 
-function selectItem(itemName){
+function selectItem(itemName) {
 	statusLabel.innerHTML = "Selected item: " + itemName;
 	HideModal();
 	data = grabSelectedData();
 	var item;
 	item = bodyPart[selectedSlot.id] = jsonCopy(data[itemName]);
-	document.getElementById(selectedSlot.id).innerHTML = '<img src="'+ item.icon + '" />'
+	document.getElementById(selectedSlot.id).innerHTML = '<img src="' + item.icon + '" />';
 	item.plus = plusSlider.value;
 	populateSelectedItems();
 }
@@ -117,24 +115,24 @@ function clearMainItems() {
 }
 
 function ChangePlus(plus) {
-	modalbody.innerHTML = "";
+	modalBody.innerHTML = "";
 	var data = grabSelectedData();
 	var keys = Object.keys(data);
 	var entry, keyName;
-	for (var i = 0,l=keys.length; i < l; i++) {
+	for (var i = 0, l = keys.length; i < l; i++) {
 		keyName = keys[i];
 		entry = data[keyName];
-		modalbody.innerHTML +=
-		'<div class="item" onclick="selectItem(\'' + keyName + '\')">' +
-		'<section>' +
-		'<div class="leftdiv height' + (Object.keys(entry).length) + '">' + //LEFT
-		'<img src="'+ entry.icon + '" />'+
-		'</div>' +
-		'<div class="rightdiv">'+ // RIGHT
-		fetchMiscDataByPlus(entry, plus) +
-		'</div>' +
-		'</section>'+
-		'</div>';
+		modalBody.innerHTML +=
+			'<div class="item" onclick="selectItem(\'' + keyName + '\')">' +
+			'<section>' +
+			'<div class="leftdiv height' + Object.keys(entry).length + '">' + //LEFT
+			'<img src="' + entry.icon + '" />' +
+			'</div>' +
+			'<div class="rightdiv">' + // RIGHT
+			fetchMiscDataByPlus(entry, plus) +
+			'</div>' +
+			'</section>' +
+			'</div>';
 	}
 	equipmentPiece.innerHTML = getSelectedName() + " +" + plus;
 	if (plusSlider.classList.contains("hidden"))
@@ -146,82 +144,81 @@ function populateSelectedItems() {
 	var data = "";
 	var keys = Object.keys(bodyPart);
 	var part;
-	for (var i = 0, j=keys.length; i < j; i++) {
+	for (var i = 0, j = keys.length; i < j; i++) {
 		part = bodyPart[keys[i]];
 
 		data += '<div class="selectedItemContainer">' +
 			'<span class="selectedItemName" onclick="ShowBonuses(this)">' + part.Name + " +" + part.plus + '</span><br />' +
-			'<div class="selectedItemBonuses">'+
+			'<div class="selectedItemBonuses">' +
 			DisplayBonuses(part.bonus, part, keys[i]) +
 			DisplayRarity(part.rarity, part, keys[i]);
-		if (part.hasOwnProperty("bonus") && Object.keys(part.bonus).length < 5 || !part.hasOwnProperty("bonus")){
-			data+='<span class="addbonus" onclick="AddBonus('+keys[i]+')">Add Bonus</span><br>';
+		if (part.hasOwnProperty("bonus") && Object.keys(part.bonus).length < 5 || !part.hasOwnProperty("bonus")) {
+			data += '<span class="addBonus" onclick="AddBonus(' + keys[i] + ')">Add Bonus</span><br>';
 		}
-		if (part.hasOwnProperty("rarity") && Object.keys(part.rarity).length < 2 || !part.hasOwnProperty("rarity")){
-			data+='<span class="addrarity" onclick="AddRarity('+keys[i]+')">Add Rarity</span>';
+		if (part.hasOwnProperty("rarity") && Object.keys(part.rarity).length < 2 || !part.hasOwnProperty("rarity")) {
+			data += '<span class="addRarity" onclick="AddRarity(' + keys[i] + ')">Add Rarity</span>';
 		}
 		data += '</div></div>';
 	}
 	selectedItemNames.innerHTML = data;
 }
 
-
 /*Start Bonus*/
 function ShowBonuses(elem){
-	/*var child = elem.parentElement.childNodes[2];
+	var child = elem.parentElement.childNodes[2];
 	if (child.classList.contains("hidden"))
 		child.classList.remove("hidden");
 	else 
-		child.classList.add("hidden");*/
+		child.classList.add("hidden");				
 }
 
-function DisplayBonuses(bonus,item, part) {
+function DisplayBonuses(bonus, item, part) {
 	var data = "";
-	var keys = (bonus != undefined)?Object.keys(bonus):{};
+	var keys = bonus !== undefined ? Object.keys(bonus) : {};
 
 	for (var i = 0; i < keys.length; i++) {
 		data += '<span class="bonus"' +
-			' onclick="RemoveBonus(\'' + keys[i] + '\',\'' + part + '\')">'+ keys[i] + ": " +
+			' onclick="RemoveBonus(\'' + keys[i] + '\',\'' + part + '\')">' + keys[i] + ": " +
 			bonus[keys[i]] + "</span><br>";
 	}
 
 	return data;
 }
 
-function AddBonus(part){
+function AddBonus(part) {
 	ShowModal();
 	var str = "";
 
-	var bonus = window[part.id +"Bonus"];
+	var bonus = window[part.id + "Bonus"];
 	var bonusData;
 	var bonusName;
 	for (var i = 0; i < bonus.length; i++) {
 		bonusData = adders[bonus[i]];
 		bonusName = Object.keys(bonusData)[0];
 		str +=
-			'<div class="itembonus">' + bonusName;
+			'<div class="itemBonus">' + bonusName;
 		bonusData = bonusData[bonusName];
 		for (var j = 0; j < bonusData.length; j++) {
-			str += ' [<span class="bonuslink" onclick="SetBonus('+part.id+','+i+','+j+')">'+
-			bonusData[j]+'</span>]';
+			str += ' [<span class="bonusLink" onclick="SetBonus(' + part.id + ',' + i + ',' + j + ')">' +
+				bonusData[j] + '</span>]';
 		}
-		str +='</div>';
+		str += '</div>';
 	}
-	modalbody.innerHTML = str;
+	modalBody.innerHTML = str;
 	plusSlider.classList.add("hidden");
 	equipmentPiece.innerHTML = "Adding " + part.id + " Bonuses";
 }
 
-function SetBonus(part, index, jndex){
-	if (!(bodyPart[part.id].hasOwnProperty("bonus"))){
+function SetBonus(part, index, jndex) {
+	if (!bodyPart[part.id].hasOwnProperty("bonus")) {
 		bodyPart[part.id].bonus = {};
 	}
 
-	if (Object.keys(bodyPart[part.id].bonus).length < 5){
-		var bonus = window[part.id +"Bonus"];//part bonuses
+	if (Object.keys(bodyPart[part.id].bonus).length < 5) {
+		var bonus = window[part.id + "Bonus"]; //part bonuses
 		var bonusValue = bonus[index];
 		var bonusName = Object.keys(adders[bonusValue]);
-		
+
 		bodyPart[part.id].bonus[bonusName] =
 			adders[bonusValue][bonusName][jndex];
 
@@ -230,10 +227,10 @@ function SetBonus(part, index, jndex){
 		statusLabel.innerHTML = "Maximum of 5 bonuses allowed.";
 	}
 	HideModal();
-	modalbody.innerHTML = "";
+	modalBody.innerHTML = "";
 }
 
-function RemoveBonus(bonus, part){
+function RemoveBonus(bonus, part) {
 	delete bodyPart[part].bonus[bonus];
 	populateSelectedItems();
 }
@@ -241,53 +238,53 @@ function RemoveBonus(bonus, part){
 /*End Bonus*/
 
 /*Start Rarity*/
-function DisplayRarity(rarity,item, part) {
+function DisplayRarity(rarity, item, part) {
 	var data = "";
-	var keys = (rarity != undefined)?Object.keys(rarity):{};
+	var keys = rarity !== undefined ? Object.keys(rarity) : {};
 
 	for (var i = 0; i < keys.length; i++) {
 		data += '<span class="rarity"' +
-			' onclick="RemoveRarity(\'' + keys[i] + '\',\'' + part + '\')">'+ keys[i] + ": " +
+			' onclick="RemoveRarity(\'' + keys[i] + '\',\'' + part + '\')">' + keys[i] + ": " +
 			rarity[keys[i]] + "</span><br>";
 	}
 
 	return data;
 }
 
-function AddRarity(part){
+function AddRarity(part) {
 	ShowModal();
 	var str = "";
 
-	var rarity = window[part.id +"Rarity"];
+	var rarity = window[part.id + "Rarity"];
 	var rarityData;
 	var rarityName;
 	for (var i = 0; i < rarity.length; i++) {
 		rarityData = rarities[rarity[i]];
 		rarityName = Object.keys(rarityData)[0];
 		str +=
-			'<div class="itembonus">' + rarityName;
+			'<div class="itemBonus">' + rarityName;
 		rarityData = rarityData[rarityName];
 		for (var j = 0; j < rarityData.length; j++) {
-			str += ' [<span class="bonuslink" onclick="SetRarity('+part.id+','+i+','+j+')">'+
-			rarityData[j]+'</span>]';
+			str += ' [<span class="bonusLink" onclick="SetRarity(' + part.id + ',' + i + ',' + j + ')">' +
+				rarityData[j] + '</span>]';
 		}
-		str +='</div>';
+		str += '</div>';
 	}
-	modalbody.innerHTML = str;
+	modalBody.innerHTML = str;
 	plusSlider.classList.add("hidden");
 	equipmentPiece.innerHTML = "Adding " + part.id + " Rarities";
 }
 
-function SetRarity(part, index, jndex){
-	if (!(bodyPart[part.id].hasOwnProperty("rarity"))){
+function SetRarity(part, index, jndex) {
+	if (!bodyPart[part.id].hasOwnProperty("rarity")) {
 		bodyPart[part.id].rarity = {};
 	}
 
-	if (Object.keys(bodyPart[part.id].rarity).length < 2){
-		var rarity = window[part.id +"Rarity"];//part rarities
+	if (Object.keys(bodyPart[part.id].rarity).length < 2) {
+		var rarity = window[part.id + "Rarity"]; //part rarities
 		var rarityValue = rarity[index];
 		var rarityName = Object.keys(rarities[rarityValue]);
-		
+
 		bodyPart[part.id].rarity[rarityName] =
 			rarities[rarityValue][rarityName][jndex];
 
@@ -296,10 +293,10 @@ function SetRarity(part, index, jndex){
 		statusLabel.innerHTML = "Maximum of 2 rarities allowed.";
 	}
 	HideModal();
-	modalbody.innerHTML = "";
+	modalBody.innerHTML = "";
 }
 
-function RemoveRarity(rarity, part){
+function RemoveRarity(rarity, part) {
 	delete bodyPart[part].rarity[rarity];
 	populateSelectedItems();
 }
@@ -309,37 +306,40 @@ function CalculateData() {
 	var obj = {};
 	var item;
 	//fetch all data
-	for(key in bodyPart) {//loop through each body part
+	for (key in bodyPart) { //loop through each body part
 		item = bodyPart[key];
-		for(k in item) { //loop each property
-			switch (k)  {
+		for (k in item) { //loop each property
+			switch (k) {
 				case "bonus":
 					var bonus = item[k];
-					for(b in bonus){
+					for (b in bonus) {
 						if (obj.hasOwnProperty(b)) {
 							obj[b] += bonus[b]; //if already exists, sum it
 						} else {
-							obj[b] = bonus[b];//else add
+							obj[b] = bonus[b]; //else add
 						}
 					}
 					break;
 				case "rarity":
 					var rarity = item[k];
-					for(b in rarity){
+					for (b in rarity) {
 						if (obj.hasOwnProperty(b)) {
 							obj[b] += rarity[b]; //if already exists, sum it
 						} else {
-							obj[b] = rarity[b];//else add
+							obj[b] = rarity[b]; //else add
 						}
 					}
 					break;
-				case "plus":case "Name":case "icon":case "Level":
+				case "plus":
+				case "Name":
+				case "icon":
+				case "Level":
 					break;
 				default:
 					if (obj.hasOwnProperty(k)) {
 						obj[k] += item[k][item.plus]; //if already exists, sum it
 					} else {
-						obj[k] = item[k][item.plus];//else add
+						obj[k] = item[k][item.plus]; //else add
 					}
 			}
 		}
@@ -351,15 +351,15 @@ function CalculateData() {
 	}
 }
 
-function FindID(type){
+function FindID(type) {
 	if (bodyPart.hasOwnProperty(type)) {
 		var name = bodyPart[type].Name;
-		if (type == "Armours" || type == "Helmets"){
+		if (type === "Armours" || type === "Helmets") {
 			type = selectedMain + " " + type;
 		}
-		var data = gamedata[type];
+		var data = gameData[type];
 		for (var i = 0, l = data.length; i < l; i++) {
-			if (data[i].Name == name) {
+			if (data[i].Name === name) {
 				return i;
 			}
 		}
@@ -369,78 +369,80 @@ function FindID(type){
 }
 
 function jsonCopy(src) {
-  return JSON.parse(JSON.stringify(src));
+	return src ? JSON.parse(JSON.stringify(src)) : undefined;
 }
 
-function copyStringToClipboard (str) {
-   // Create new element
-   var el = document.createElement('textarea');
-   // Set value (string to be copied)
-   el.value = str;
-   // Set non-editable to avoid focus and move outside of view
-   el.setAttribute('readonly', '');
-   el.style = {position: 'absolute', left: '-9999px'};
-   document.body.appendChild(el);
-   // Select text inside element
-   el.select();
-   // Copy text to clipboard
-   document.execCommand('copy');
-   // Remove temporary element
-   document.body.removeChild(el);
+function copyStringToClipboard(str) {
+	// Create new element
+	var el = document.createElement('textarea');
+	// Set value (string to be copied)
+	el.value = str;
+	// Set non-editable to avoid focus and move outside of view
+	el.setAttribute('readonly', '');
+	el.style = {
+		position: 'absolute',
+		left: '-9999px'
+	};
+	document.body.appendChild(el);
+	// Select text inside element
+	el.select();
+	// Copy text to clipboard
+	document.execCommand('copy');
+	// Remove temporary element
+	document.body.removeChild(el);
 }
 
-var linkSequencer = ["Armours","Helmets","Shields","Bracelets",
-"Earrings","Necklaces","weapon","Belts", "Shoes"];
+var linkSequencer = ["Armours", "Helmets", "Shields", "Bracelets",
+	"Earrings", "Necklaces", "weapon", "Belts", "Shoes"
+];
 
 function GenerateLink() {
-	var link = window.location.href.split('?')[0]+"?";
+	var link = window.location.href.split('?')[0] + "?";
 
-	link+=selectedMain+"=";
+	link += selectedMain + "=";
 	var part;
 	var item;
 	var itemID;
 	for (var i = 0; i < linkSequencer.length; i++) {
 		part = linkSequencer[i];
-		itemID = (FindID(part) + 1);
-		link += itemID;
-
+		itemID = FindID(part) + 1;
+		link += ToLinkChar(itemID);
 		if (itemID > 0) {
 			item = bodyPart[part];
 			//plus
-			link += "," + item.plus;
+			link += item.plus;
 			//bonuses
-			link += "," + FectchBonusQS(item, "bonus", adders);
+			link += FetchBonusQS(item, "bonus", adders);
 			//rarities
-			link += "," + FectchBonusQS(item, "rarity", rarities);
+			link += "," + FetchBonusQS(item, "rarity", rarities);
 		}
 		link += "_";
 	}
-	
+
 	link = link.slice(0, -1);
 	copyStringToClipboard(link);
 }
 
-function FectchBonusQS(item, target, targetVar) {
-	if (item.hasOwnProperty(target)){
+function FetchBonusQS(item, target, data) {
+	if (item.hasOwnProperty(target)) {
 		var keys = Object.keys(item[target]);
 		var link = "";
 		var helper;
-		for(key in keys) {
+		for (key in keys) {
 			key = keys[key];
-			for (var i = 0, l = targetVar.length; i < l; i++) {
-				helper = targetVar[i];
-				if (Object.keys(helper)[0] == key) {
-					link += i + "-";
+			for (var i = 0, l = data.length; i < l; i++) {
+				helper = data[i];
+				if (Object.keys(helper)[0] === key) {
+					link += ToLinkChar(i);
 					helper = helper[key];
 					for (var j = 0; j < helper.length; j++) {
-						if (item[target][key] == helper[j]) {
-							link += j + ";";
+						if (item[target][key] === helper[j]) {
+							link += j;
 						}
 					}
 				}
 			}
 		}
-		link = link.slice(0, -1);
 	} else {
 		link = 0;
 	}
@@ -449,66 +451,88 @@ function FectchBonusQS(item, target, targetVar) {
 
 function LoadQueryString() {
 	//decode string
-    var match,
-        pl     = /\+/g,  // Regex for replacing addition symbol with a space
-        search = /([^&=]+)=?([^&]*)/g,
-        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
-        query  = window.location.search.substring(1);
+	var match,
+		pl = /\+/g, // Regex for replacing addition symbol with a space
+		search = /([^&=]+)=?([^&]*)/g,
+		decode = function (s) {
+			return decodeURIComponent(s.replace(pl, " "));
+		},
+		query = window.location.search.substring(1);
 
-    var urlParams = {};
-    while (match = search.exec(query))
-       urlParams[decode(match[1])] = decode(match[2]);
-   //deal with the data
-   //first, select the main class
-   if (Object.keys(urlParams).length == 0) {
-   		return;
-   }
-   document.getElementById(Object.keys(urlParams)[0]+"Radio").click();
-   //split the data on a body part basis "_" delimits each part
-   var arr = urlParams[Object.keys(urlParams)[0]].split('_');
+	var urlParams = {};
+	while (match = search.exec(query))
+		urlParams[decode(match[1])] = decode(match[2]);
+	//deal with the data
+	//first, select the main class
+	if (Object.keys(urlParams).length === 0) {
+		return;
+	}
+	document.getElementById(Object.keys(urlParams)[0] + "Radio").click();
+	//split the data on a body part basis "_" delimits each part
+	var arr = urlParams[Object.keys(urlParams)[0]].split('_');
 
-   //loop through each part
-   var type;
-   var itemID;
-   var partData;
-   for (var i = 0; i < linkSequencer.length; i++) {
-   		type = linkSequencer[i];
-   		if (type == "Armours" || type == "Helmets"){
+	//loop through each part
+	var type;
+	var itemID;
+	var partData;
+	for (var i = 0; i < linkSequencer.length; i++) {
+		type = linkSequencer[i];
+		if (type === "Armours" || type === "Helmets") {
 			type = selectedMain + " " + type;
 		}
 		partData = arr[i];
-		if (partData != 0) {
-			partData = partData.split(','); //split the part data
-			itemID = partData[0] - 1; //fetch the ID
-			bodyPart[linkSequencer[i]] = gamedata[type][itemID]; //grab the item
+		if (partData !== 0) {
+			itemID = FromLinkChar(partData[0]);
+			if (--itemID === -1)
+				continue;
+			bodyPart[linkSequencer[i]] = gameData[type][itemID]; //grab the item
 			var item;
-			item = bodyPart[linkSequencer[i]] = jsonCopy(gamedata[type][itemID]); //deep copy
+			item = bodyPart[linkSequencer[i]] = jsonCopy(gameData[type][itemID]); //deep copy
 			//display item image
-			document.getElementById(linkSequencer[i]).innerHTML = '<img src="'+ item.icon + '" />';
+			document.getElementById(linkSequencer[i]).innerHTML = '<img src="' + item.icon + '" />';
 			item.plus = partData[1]; //fetch the plus
 			//deal with bonuses
-			ObtainBonusQS(item, partData[2], "bonus", adders);
+			ObtainBonusQS(item, partData.substring(2), "bonus", adders);
 			//deal with  rarity
-			ObtainBonusQS(item, partData[3], "rarity", rarities);
+			ObtainBonusQS(item, partData.split(',')[1], "rarity", rarities);
 			populateSelectedItems();
 		}
-   }
+	}
 }
 
 function ObtainBonusQS(item, data, target, targetVar) {
 	if (data != 0) {
-		var d = data.split(";");
 		var b;
 		var key;
 		item[target] = {};
-		for (var i = 0; i < d.length; i++) {
-			b = d[i].split("-");
-			key = Object.keys(targetVar[b[0]])[0];
-			for (var j = 0; j < targetVar.length; j++) {
-				if (Object.keys(targetVar[j])[0] == key) {
-					item[target][key] = targetVar[j][key][b[1]];
+		for (var i = 0; i < data.length; i += 2) {
+			b = FromLinkChar(data[i]);
+			if (b >= 0) {
+				key = Object.keys(targetVar[b])[0];
+				for (var j = 0; j < targetVar.length; j++) {
+					if (Object.keys(targetVar[j])[0] === key) {
+						item[target][key] = targetVar[j][key][data[i + 1]];
+					}
 				}
+			} else {
+				break;
 			}
 		}
 	}
+}
+
+function ToLinkChar(int) {
+	int += 65;
+	if (int >= 91) {
+		int += 6;
+	}
+	return String.fromCharCode(int);
+}
+
+function FromLinkChar(char) {
+	char = char.charCodeAt(0); //fetch the ID
+	if (char >= 91) {
+		char -= 6;
+	}
+	return char - 65;
 }
